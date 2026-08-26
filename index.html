@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Medvance Pharmacy | Genuine Medicines & Healthcare Products</title>
+
+  <meta
+    name="description"
+    content="Shop genuine medicines, vitamins, supplements, personal care products and healthcare essentials from Medvance Pharmacy."
+  />
+
+  <meta
+    name="keywords"
+    content="Medvance Pharmacy, pharmacy, medicines, vitamins, supplements, healthcare products, prescription medicines, OTC medicines, Lagos pharmacy"
+  />
+
+  <meta name="author" content="Medvance Pharmacy" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://www.medvance.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Medvance Pharmacy | Your Health, Our Priority" />
+  <meta
+    property="og:description"
+    content="Shop genuine medicines and healthcare products from Medvance Pharmacy."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.medvance.com/" />
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23d81b60'/%3E%3Cpath d='M50 22v56M22 50h56' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E"
+  />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Pharmacy",
+    "name": "Medvance Pharmacy",
+    "url": "https://www.medvance.com/",
+    "description": "Medvance Pharmacy provides genuine medicines, healthcare products, vitamins and personal care essentials.",
+    "telephone": "+2349012345678",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lagos",
+      "addressCountry": "NG"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- =========================
+       TOP BAR
+  ========================== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span>Genuine healthcare products you can trust.</span>
+
+      <div class="top-bar-right">
+        <span>Fast Delivery</span>
+        <span class="separator">|</span>
+        <span>100% Genuine Products</span>
+        <span class="separator">|</span>
+        <span>Expert Support</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        <span class="logo-icon">
+          <span></span>
+          <span></span>
+        </span>
+
+        <span>
+          <strong>MEDVANCE</strong>
+          <small>Advancing Health. Enhancing Lives.</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#home" class="active">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About Us</a>
+        <a href="#why-us">Why Medvance</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+
+        <button
+          class="icon-button"
+          id="searchToggle"
+          aria-label="Open search"
+        >
+          <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4-4"></path>
+          </svg>
+        </button>
+
+        <button
+          class="icon-button"
+          aria-label="Account"
+        >
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 21c.8-4 3.5-6 8-6s7.2 2 8 6"></path>
+          </svg>
+        </button>
+
+        <button
+          class="cart-button"
+          id="cartButton"
+          aria-label="Shopping cart"
+        >
+          <svg viewBox="0 0 24 24">
+            <path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 7H6"></path>
+            <circle cx="10" cy="20" r="1"></circle>
+            <circle cx="18" cy="20" r="1"></circle>
+          </svg>
+
+          <span id="cartCount">0</span>
+        </button>
+
+        <button
+          class="mobile-menu-button"
+          id="mobileMenuButton"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#about">About Us</a>
+      <a href="#why-us">Why Medvance</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- =========================
+       SEARCH BAR
+  ========================== -->
+  <div class="search-panel" id="searchPanel">
+    <div class="container search-inner">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search medicines, vitamins, personal care..."
+        aria-label="Search products"
+      />
+
+      <button id="closeSearch" aria-label="Close search">
+        &times;
+      </button>
+    </div>
+  </div>
+
+
+  <main>
+
+    <!-- =========================
+         SECTION 1 — HERO
+    ========================== -->
+    <section class="hero" id="home">
+      <div class="hero-background"></div>
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            <span></span>
+            Your trusted pharmacy partner
+          </div>
+
+          <h1>
+            Your Health,
+            <span>Our Priority.</span>
+          </h1>
+
+          <p>
+            Genuine medicines, quality healthcare products and
+            expert support — delivered conveniently to your doorstep.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#shop" class="button button-primary">
+              Shop Now
+              <span>→</span>
+            </a>
+
+            <a
+              href="https://wa.me/2349012345678?text=Hello%20Medvance%20Pharmacy,%20I%20would%20like%20to%20make%20an%20enquiry."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-whatsapp"
+            >
+              <span class="whatsapp-icon">◔</span>
+              Chat on WhatsApp
+            </a>
+          </div>
+
+          <div class="hero-trust">
+
+            <div class="trust-item">
+              <div class="trust-icon">✓</div>
+              <div>
+                <strong>100% Genuine</strong>
+                <span>Authentic Medicines</span>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">↗</div>
+              <div>
+                <strong>Fast Delivery</strong>
+                <span>Across Your City</span>
+              </div>
+            </div>
+
+            <div class="trust-item">
+              <div class="trust-icon">♧</div>
+              <div>
+                <strong>Expert Support</strong>
+                <span>We're Here to Help</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="hero-visual">
+
+          <div class="hero-circle circle-one"></div>
+          <div class="hero-circle circle-two"></div>
+
+          <div class="medicine-bottle vitamin-bottle">
+            <div class="bottle-cap"></div>
+            <div class="bottle-body">
+              <span>MEDVANCE</span>
+              <strong>VITAMIN C</strong>
+              <small>1000mg</small>
+              <i>60 TABLETS</i>
+            </div>
+          </div>
+
+          <div class="medicine-box">
+            <div class="box-label">
+              <span>MEDVANCE</span>
+              <strong>ACETAMINOPHEN</strong>
+              <small>500mg</small>
+              <em>24 TABLETS</em>
+            </div>
+          </div>
+
+          <div class="sanitizer">
+            <div class="pump"></div>
+            <div class="sanitizer-body">
+              <span>MEDVANCE</span>
+              <strong>HAND<br />SANITIZER</strong>
+              <small>250ml</small>
+            </div>
+          </div>
+
+          <div class="hero-platform"></div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         SECTION 2 — CATEGORIES
+    ========================== -->
+    <section class="categories-section section" id="categories">
+      <div class="container">
+
+        <div class="section-heading centered">
+          <span class="section-label">SHOP BY CATEGORY</span>
+          <h2>Everything You Need,<br />All in One Place.</h2>
+          <p>
+            Find trusted healthcare essentials from our carefully
+            selected range of pharmacy products.
+          </p>
+        </div>
+
+        <div class="category-grid">
+
+          <a href="#shop" class="category-card">
+            <div class="category-icon">✚</div>
+            <h3>Prescription Medicines</h3>
+            <p>Essential medications</p>
+          </a>
+
+          <a href="#shop" class="category-card">
+            <div class="category-icon">◈</div>
+            <h3>OTC Medicines</h3>
+            <p>Everyday health needs</p>
+          </a>
+
+          <a href="#shop" class="category-card">
+            <div class="category-icon">♢</div>
+            <h3>Vitamins & Supplements</h3>
+            <p>Support your wellbeing</p>
+          </a>
+
+          <a href="#shop" class="category-card">
+            <div class="category-icon">♙</div>
+            <h3>Personal Care</h3>
+            <p>Care for every day</p>
+          </a>
+
+          <a href="#shop" class="category-card">
+            <div class="category-icon">♡</div>
+            <h3>Baby & Child Care</h3>
+            <p>For little ones</p>
+          </a>
+
+          <a href="#shop" class="category-card">
+            <div class="category-icon">⌁</div>
+            <h3>Health Devices</h3>
+            <p>Monitor your health</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         SECTION 3 — PRODUCTS
+    ========================== -->
+    <section class="products-section section" id="shop">
+      <div class="container">
+
+        <div class="section-heading product-heading">
+          <div>
+            <span class="section-label">OUR PRODUCTS</span>
+            <h2>Featured Products</h2>
+            <p>Popular healthcare essentials trusted by our customers.</p>
+          </div>
+
+          <div class="product-filters">
+            <button class="filter-button active" data-category="all">
+              All
+            </button>
+
+            <button class="filter-button" data-category="medicine">
+              Medicines
+            </button>
+
+            <button class="filter-button" data-category="vitamins">
+              Vitamins
+            </button>
+
+            <button class="filter-button" data-category="personal">
+              Personal Care
+            </button>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+
+          <!-- Product 1 -->
+          <article class="product-card" data-category="medicine" data-name="Paracetamol 500mg">
+            <div class="product-image product-paracetamol">
+              <div class="product-box-art">
+                <span>MEDVANCE</span>
+                <strong>PARACETAMOL</strong>
+                <small>500mg</small>
+                <em>24 TABLETS</em>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Pain Relief</span>
+              <h3>Paracetamol 500mg</h3>
+              <p>24 Tablets</p>
+
+              <div class="product-bottom">
+                <strong>₦1,200</strong>
+                <button class="add-cart" data-product="Paracetamol 500mg">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Product 2 -->
+          <article class="product-card" data-category="vitamins" data-name="Vitamin C 1000mg">
+            <div class="product-image">
+              <div class="product-bottle-art">
+                <div class="cap"></div>
+                <div class="bottle">
+                  <span>MEDVANCE</span>
+                  <strong>VITAMIN C</strong>
+                  <small>1000mg</small>
+                  <em>60 TABLETS</em>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Vitamins</span>
+              <h3>Vitamin C 1000mg</h3>
+              <p>60 Tablets</p>
+
+              <div class="product-bottom">
+                <strong>₦3,500</strong>
+                <button class="add-cart" data-product="Vitamin C 1000mg">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Product 3 -->
+          <article class="product-card" data-category="medicine" data-name="Amoxicillin 500mg">
+            <div class="product-image">
+              <div class="product-box-art">
+                <span>MEDVANCE</span>
+                <strong>AMOXICILLIN</strong>
+                <small>500mg</small>
+                <em>21 CAPSULES</em>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Antibiotics</span>
+              <h3>Amoxicillin 500mg</h3>
+              <p>21 Capsules</p>
+
+              <div class="product-bottom">
+                <strong>₦2,800</strong>
+                <button class="add-cart" data-product="Amoxicillin 500mg">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Product 4 -->
+          <article class="product-card" data-category="medicine" data-name="Omeprazole 20mg">
+            <div class="product-image">
+              <div class="product-box-art teal">
+                <span>MEDVANCE</span>
+                <strong>OMEPRAZOLE</strong>
+                <small>20mg</small>
+                <em>14 CAPSULES</em>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Stomach Care</span>
+              <h3>Omeprazole 20mg</h3>
+              <p>14 Capsules</p>
+
+              <div class="product-bottom">
+                <strong>₦2,000</strong>
+                <button class="add-cart" data-product="Omeprazole 20mg">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Product 5 -->
+          <article class="product-card" data-category="personal" data-name="Hand Sanitizer 250ml">
+            <div class="product-image">
+              <div class="sanitizer-art">
+                <div class="mini-pump"></div>
+                <div class="mini-bottle">
+                  <span>MEDVANCE</span>
+                  <strong>HAND<br />SANITIZER</strong>
+                  <small>250ml</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Personal Care</span>
+              <h3>Hand Sanitizer 250ml</h3>
+              <p>250ml</p>
+
+              <div class="product-bottom">
+                <strong>₦1,800</strong>
+                <button class="add-cart" data-product="Hand Sanitizer 250ml">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Product 6 -->
+          <article class="product-card" data-category="vitamins" data-name="Multivitamin Tablets">
+            <div class="product-image">
+              <div class="product-bottle-art">
+                <div class="cap"></div>
+                <div class="bottle">
+                  <span>MEDVANCE</span>
+                  <strong>MULTI<br />VITAMIN</strong>
+                  <small>Daily Support</small>
+                  <em>60 TABLETS</em>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Vitamins</span>
+              <h3>Daily Multivitamin</h3>
+              <p>60 Tablets</p>
+
+              <div class="product-bottom">
+                <strong>₦4,500</strong>
+                <button class="add-cart" data-product="Daily Multivitamin">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Product 7 -->
+          <article class="product-card" data-category="personal" data-name="Moisturizing Body Lotion">
+            <div class="product-image">
+              <div class="lotion-art">
+                <div class="lotion-cap"></div>
+                <div class="lotion-body">
+                  <span>MEDVANCE</span>
+                  <strong>MOISTURE<br />CARE</strong>
+                  <small>Body Lotion</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Personal Care</span>
+              <h3>Moisturizing Lotion</h3>
+              <p>400ml</p>
+
+              <div class="product-bottom">
+                <strong>₦3,200</strong>
+                <button class="add-cart" data-product="Moisturizing Lotion">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Product 8 -->
+          <article class="product-card" data-category="medicine" data-name="Ibuprofen 400mg">
+            <div class="product-image">
+              <div class="product-box-art">
+                <span>MEDVANCE</span>
+                <strong>IBUPROFEN</strong>
+                <small>400mg</small>
+                <em>24 TABLETS</em>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Pain Relief</span>
+              <h3>Ibuprofen 400mg</h3>
+              <p>24 Tablets</p>
+
+              <div class="product-bottom">
+                <strong>₦1,800</strong>
+                <button class="add-cart" data-product="Ibuprofen 400mg">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Product 9 -->
+          <article class="product-card" data-category="vitamins" data-name="Omega 3 Capsules">
+            <div class="product-image">
+              <div class="product-bottle-art">
+                <div class="cap"></div>
+                <div class="bottle">
+                  <span>MEDVANCE</span>
+                  <strong>OMEGA 3</strong>
+                  <small>1000mg</small>
+                  <em>60 CAPSULES</em>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Supplements</span>
+              <h3>Omega 3 Capsules</h3>
+              <p>60 Capsules</p>
+
+              <div class="product-bottom">
+                <strong>₦5,000</strong>
+                <button class="add-cart" data-product="Omega 3 Capsules">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+
+          <!-- Product 10 -->
+          <article class="product-card" data-category="personal" data-name="Antibacterial Hand Wash">
+            <div class="product-image">
+              <div class="lotion-art wash">
+                <div class="lotion-cap"></div>
+                <div class="lotion-body">
+                  <span>MEDVANCE</span>
+                  <strong>HAND<br />WASH</strong>
+                  <small>500ml</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-info">
+              <span class="product-category">Personal Care</span>
+              <h3>Antibacterial Hand Wash</h3>
+              <p>500ml</p>
+
+              <div class="product-bottom">
+                <strong>₦2,500</strong>
+                <button class="add-cart" data-product="Antibacterial Hand Wash">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="products-empty" id="productsEmpty">
+          <h3>No products found</h3>
+          <p>Try another search or category.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         SECTION 4 — WHY MEDVANCE
+    ========================== -->
+    <section class="why-section section" id="why-us">
+      <div class="container">
+
+        <div class="section-heading centered">
+          <span class="section-label">WHY MEDVANCE</span>
+          <h2>Healthcare You Can Trust.</h2>
+          <p>
+            We make getting the healthcare products you need
+            simple, safe and convenient.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+
+          <div class="benefit-card">
+            <div class="benefit-number">01</div>
+            <div class="benefit-icon">✓</div>
+            <h3>Quality Guaranteed</h3>
+            <p>
+              We source genuine and approved healthcare products
+              from trusted suppliers.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-number">02</div>
+            <div class="benefit-icon">⌁</div>
+            <h3>Secure Shopping</h3>
+            <p>
+              Your information and shopping experience are
+              handled with care and security.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-number">03</div>
+            <div class="benefit-icon">→</div>
+            <h3>Fast Delivery</h3>
+            <p>
+              Get your healthcare essentials delivered quickly
+              and conveniently.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-number">04</div>
+            <div class="benefit-icon">♡</div>
+            <h3>Expert Support</h3>
+            <p>
+              Our team is available to help you make informed
+              decisions about your healthcare needs.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================
+         SECTION 5 — ABOUT
+    ========================== -->
+    <section class="about-section section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-visual">
+
+          <div class="about-card about-card-main">
+            <div class="medical-cross">+</div>
+
+            <span>MEDVANCE</span>
+
+            <h3>
+              Advancing Health.<br />
+              Enhancing Lives.
+            </h3>
+
+            <p>
+              Your trusted partner for everyday healthcare.
+            </p>
+          </div>
+
+          <div class="about-card floating-card">
+            <strong>100%</strong>
+            <span>Genuine Products</span>
+          </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+          <span class="section-label">ABOUT MEDVANCE</span>
+
+          <h2>
+            Better Healthcare,
+            <span>Made Simple.</span>
+          </h2>
+
+          <p class="about-lead">
+            Medvance Pharmacy is built around one simple belief:
+            access to quality healthcare should be convenient,
+            trustworthy and straightforward.
+          </p>
+
+          <p>
+            From everyday medicines and vitamins to personal care
+            essentials, we carefully select products that help
+            individuals and families take better care of their health.
+          </p>
+
+          <div class="about-points">
+
+            <div>
+              <span>✓</span>
+              <p>Trusted healthcare products</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>Professional customer support</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>Convenient ordering and delivery</p>
+            </div>
+
+          </div>
+
+          <a href="#shop" class="button button-primary">
+            Explore Our Products
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         SECTION 6 — CONTACT / CTA
+    ========================== -->
+    <section class="contact-section section" id="contact">
+      <div class="container">
+
+        <div class="contact-card">
+
+          <div class="contact-content">
+            <span class="section-label">NEED HELP?</span>
+
+            <h2>
+              Have a Question About
+              <span>Your Health?</span>
+            </h2>
+
+            <p>
+              Speak with our team on WhatsApp for product enquiries,
+              availability, delivery information and general support.
+            </p>
+
+            <a
+              href="https://wa.me/2349012345678?text=Hello%20Medvance%20Pharmacy,%20I%20need%20some%20help."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-light"
+            >
+              Chat With Us on WhatsApp
+              <span>→</span>
+            </a>
+          </div>
+
+          <div class="contact-decoration">
+            <div class="contact-circle"></div>
+            <div class="contact-cross">+</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       NEWSLETTER
+  ========================== -->
+  <section class="newsletter">
+    <div class="container newsletter-inner">
+
+      <div>
+        <span class="newsletter-icon">✉</span>
+
+        <div>
+          <strong>Stay updated with health tips & offers</strong>
+          <p>Subscribe to receive useful health information and special offers.</p>
+        </div>
+      </div>
+
+      <form class="newsletter-form" id="newsletterForm">
+        <label class="sr-only" for="email">Email address</label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email address"
+          required
+        />
+
+        <button type="submit">Subscribe</button>
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="#home" class="logo footer-logo">
+          <span class="logo-icon">
+            <span></span>
+            <span></span>
+          </span>
+
+          <span>
+            <strong>MEDVANCE</strong>
+            <small>Advancing Health. Enhancing Lives.</small>
+          </span>
+        </a>
+
+        <p>
+          Medvance Pharmacy is committed to providing genuine
+          medicines, quality healthcare products and exceptional
+          customer service.
+        </p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+
+          <a
+            href="https://wa.me/2349012345678"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            ◔
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About Us</a>
+        <a href="#why-us">Why Medvance</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+
+      <div class="footer-column">
+        <h3>Categories</h3>
+
+        <a href="#shop">Prescription Medicines</a>
+        <a href="#shop">OTC Medicines</a>
+        <a href="#shop">Vitamins & Supplements</a>
+        <a href="#shop">Personal Care</a>
+        <a href="#shop">Baby & Child Care</a>
+        <a href="#shop">Health Devices</a>
+      </div>
+
+
+      <div class="footer-column">
+        <h3>Customer Support</h3>
+
+        <a href="#contact">FAQs</a>
+        <a href="#contact">Shipping & Delivery</a>
+        <a href="#contact">Returns & Refunds</a>
+        <a href="#contact">Terms & Conditions</a>
+        <a href="#contact">Privacy Policy</a>
+      </div>
+
+
+      <div class="footer-column">
+        <h3>Get in Touch</h3>
+
+        <a href="tel:+2349012345678">
+          +234 901 234 5678
+        </a>
+
+        <a href="mailto:hello@medvance.com">
+          hello@medvance.com
+        </a>
+
+        <span>Lagos, Nigeria</span>
+
+        <span>Mon - Sat: 8:00AM - 8:00PM</span>
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <p>
+        © <span id="year"></span> Medvance Pharmacy.
+        All rights reserved.
+      </p>
+
+      <p>
+        Your Health. Our Priority.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       CART DRAWER
+  ========================== -->
+  <aside class="cart-drawer" id="cartDrawer">
+
+    <div class="cart-header">
+      <div>
+        <span>YOUR CART</span>
+        <h2>Shopping Cart</h2>
+      </div>
+
+      <button id="closeCart" aria-label="Close cart">
+        &times;
+      </button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <div>🛒</div>
+        <h3>Your cart is empty</h3>
+        <p>Add products to get started.</p>
+      </div>
+    </div>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₦0</strong>
+      </div>
+
+      <a
+        href="https://wa.me/2349012345678?text=Hello%20Medvance%20Pharmacy,%20I%20would%20like%20to%20place%20an%20order."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button button-primary checkout-button"
+      >
+        Order via WhatsApp
+        <span>→</span>
+      </a>
+
+      <small>
+        This is a static storefront. Orders are completed through WhatsApp.
+      </small>
+
+    </div>
+
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================== -->
+  <a
+    href="https://wa.me/2349012345678?text=Hello%20Medvance%20Pharmacy,%20I%20would%20like%20to%20make%20an%20enquiry."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-whatsapp"
+    aria-label="Chat with Medvance on WhatsApp"
+  >
+    <span>◔</span>
+  </a>
+
+
+  <div class="toast" id="toast">
+    <span>✓</span>
+    <p>Product added to cart.</p>
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
