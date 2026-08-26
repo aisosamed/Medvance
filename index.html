@@ -8,7 +8,9 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>Medvance Pharmacy | Genuine Medicines & Healthcare Products</title>
+  <title>
+    Medvance Pharmacy | Genuine Medicines & Healthcare Products
+  </title>
 
   <meta
     name="description"
@@ -17,38 +19,349 @@
 
   <meta
     name="keywords"
-    content="Medvance Pharmacy, pharmacy, medicines, vitamins, supplements, healthcare products, prescription medicines, OTC medicines, Lagos pharmacy"
+    content="Medvance Pharmacy, pharmacy, medicines, vitamins, supplements, healthcare products, Lagos pharmacy"
   />
 
   <meta name="author" content="Medvance Pharmacy" />
-  <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://www.medvance.com/" />
+  <meta
+    name="robots"
+    content="index, follow"
+  />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Medvance Pharmacy | Your Health, Our Priority" />
+  <link
+    rel="canonical"
+    href="https://www.medvance.com/"
+  />
+
+  <meta
+    property="og:title"
+    content="Medvance Pharmacy | Your Health, Our Priority"
+  />
+
   <meta
     property="og:description"
     content="Shop genuine medicines and healthcare products from Medvance Pharmacy."
   />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.medvance.com/" />
 
-  <!-- Favicon -->
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:url"
+    content="https://www.medvance.com/"
+  />
+
   <link
     rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23d81b60'/%3E%3Cpath d='M50 22v56M22 50h56' stroke='white' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E"
   />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  />
+
+  <!--
+    CART FALLBACK STYLES
+
+    These styles make the cart drawer work even if
+    your existing styles.css does not contain the
+    correct drawer/overlay styles.
+  -->
+
+  <style>
+    .cart-drawer {
+      position: fixed !important;
+      top: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      width: min(430px, 92vw) !important;
+      height: 100vh !important;
+      z-index: 99999 !important;
+
+      background: #fff !important;
+      box-shadow: -20px 0 60px rgba(0, 0, 0, 0.18) !important;
+
+      display: flex !important;
+      flex-direction: column !important;
+
+      transform: translateX(105%) !important;
+      visibility: hidden !important;
+
+      transition:
+        transform 0.3s ease,
+        visibility 0.3s ease !important;
+    }
+
+    .cart-drawer.cart-open {
+      transform: translateX(0) !important;
+      visibility: visible !important;
+    }
+
+    .cart-overlay {
+      position: fixed !important;
+      inset: 0 !important;
+      background: rgba(31, 10, 22, 0.55) !important;
+      z-index: 99998 !important;
+
+      opacity: 0 !important;
+      visibility: hidden !important;
+
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease !important;
+    }
+
+    .cart-overlay.cart-overlay-visible {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .cart-header {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 24px !important;
+      border-bottom: 1px solid #eee !important;
+      flex-shrink: 0 !important;
+    }
+
+    .cart-header span {
+      display: block !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.12em !important;
+      color: #d81b60 !important;
+      margin-bottom: 4px !important;
+    }
+
+    .cart-header h2 {
+      margin: 0 !important;
+      font-family: "Manrope", sans-serif !important;
+      font-size: 24px !important;
+      color: #26131d !important;
+    }
+
+    #closeCart {
+      width: 40px !important;
+      height: 40px !important;
+      border: 0 !important;
+      border-radius: 50% !important;
+      background: #f8eef2 !important;
+      color: #26131d !important;
+      font-size: 28px !important;
+      cursor: pointer !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .cart-items {
+      flex: 1 !important;
+      overflow-y: auto !important;
+      padding: 18px !important;
+    }
+
+    .cart-item {
+      display: grid !important;
+      grid-template-columns: 1fr auto !important;
+      gap: 14px !important;
+      padding: 16px 0 !important;
+      border-bottom: 1px solid #eee !important;
+    }
+
+    .cart-item-info h3 {
+      margin: 0 0 5px !important;
+      font-family: "Manrope", sans-serif !important;
+      font-size: 15px !important;
+      color: #26131d !important;
+    }
+
+    .cart-item-price {
+      margin: 0 0 12px !important;
+      font-size: 14px !important;
+      color: #777 !important;
+    }
+
+    .cart-item-actions {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+    }
+
+    .quantity-control {
+      display: flex !important;
+      align-items: center !important;
+      border: 1px solid #ddd !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
+    }
+
+    .quantity-control button {
+      width: 30px !important;
+      height: 30px !important;
+      border: 0 !important;
+      background: #faf5f7 !important;
+      color: #d81b60 !important;
+      font-size: 18px !important;
+      cursor: pointer !important;
+    }
+
+    .quantity-control span {
+      min-width: 32px !important;
+      text-align: center !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+    }
+
+    .remove-item {
+      border: 0 !important;
+      background: transparent !important;
+      color: #b42318 !important;
+      font-size: 12px !important;
+      cursor: pointer !important;
+      padding: 4px !important;
+    }
+
+    .cart-item-total {
+      font-weight: 700 !important;
+      font-size: 14px !important;
+      color: #26131d !important;
+      white-space: nowrap !important;
+    }
+
+    .cart-empty-state {
+      min-height: 300px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      color: #777 !important;
+    }
+
+    .cart-empty-icon {
+      width: 70px !important;
+      height: 70px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border-radius: 50% !important;
+      background: #f8eef2 !important;
+      font-size: 28px !important;
+      margin-bottom: 18px !important;
+    }
+
+    .cart-empty-state h3 {
+      margin: 0 0 6px !important;
+      color: #26131d !important;
+    }
+
+    .cart-empty-state p {
+      margin: 0 !important;
+      font-size: 14px !important;
+    }
+
+    .cart-footer {
+      padding: 20px 24px !important;
+      border-top: 1px solid #eee !important;
+      background: #fff !important;
+      flex-shrink: 0 !important;
+    }
+
+    .cart-total {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      margin-bottom: 16px !important;
+    }
+
+    .cart-total span {
+      font-size: 14px !important;
+      color: #777 !important;
+    }
+
+    .cart-total strong {
+      font-size: 22px !important;
+      color: #26131d !important;
+    }
+
+    .checkout-button {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      text-decoration: none !important;
+      box-sizing: border-box !important;
+    }
+
+    .cart-footer small {
+      display: block !important;
+      margin-top: 12px !important;
+      text-align: center !important;
+      color: #888 !important;
+      font-size: 11px !important;
+    }
+
+    .cart-button {
+      position: relative !important;
+      cursor: pointer !important;
+    }
+
+    .cart-button #cartCount {
+      min-width: 18px !important;
+      height: 18px !important;
+      padding: 0 4px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      position: absolute !important;
+      top: -4px !important;
+      right: -5px !important;
+      border-radius: 50% !important;
+      background: #d81b60 !important;
+      color: #fff !important;
+      font-size: 10px !important;
+      font-weight: 700 !important;
+    }
+
+    .add-cart {
+      cursor: pointer !important;
+    }
+
+    .add-cart.added {
+      background: #7a183e !important;
+    }
+
+    @media (max-width: 480px) {
+      .cart-drawer {
+        width: 100vw !important;
+      }
+
+      .cart-header {
+        padding: 20px !important;
+      }
+
+      .cart-footer {
+        padding: 18px 20px !important;
+      }
+    }
+  </style>
 
   <!-- Organization Schema -->
   <script type="application/ld+json">
@@ -70,9 +383,7 @@
 
 <body>
 
-  <!-- =========================
-       TOP BAR
-  ========================== -->
+  <!-- TOP BAR -->
   <div class="top-bar">
     <div class="container top-bar-inner">
       <span>Genuine healthcare products you can trust.</span>
@@ -88,9 +399,7 @@
   </div>
 
 
-  <!-- =========================
-       NAVBAR
-  ========================== -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="container nav-inner">
 
@@ -106,6 +415,7 @@
         </span>
       </a>
 
+
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#home" class="active">Home</a>
         <a href="#shop">Shop</a>
@@ -115,11 +425,13 @@
         <a href="#contact">Contact</a>
       </nav>
 
+
       <div class="nav-actions">
 
         <button
           class="icon-button"
           id="searchToggle"
+          type="button"
           aria-label="Open search"
         >
           <svg viewBox="0 0 24 24">
@@ -128,8 +440,10 @@
           </svg>
         </button>
 
+
         <button
           class="icon-button"
+          type="button"
           aria-label="Account"
         >
           <svg viewBox="0 0 24 24">
@@ -138,10 +452,15 @@
           </svg>
         </button>
 
+
+        <!-- CART BUTTON -->
         <button
           class="cart-button"
           id="cartButton"
+          type="button"
           aria-label="Shopping cart"
+          aria-controls="cartDrawer"
+          aria-expanded="false"
         >
           <svg viewBox="0 0 24 24">
             <path d="M3 4h2l2.2 11.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 7H6"></path>
@@ -152,9 +471,11 @@
           <span id="cartCount">0</span>
         </button>
 
+
         <button
           class="mobile-menu-button"
           id="mobileMenuButton"
+          type="button"
           aria-label="Open menu"
         >
           <span></span>
@@ -165,8 +486,13 @@
       </div>
     </div>
 
-    <!-- Mobile navigation -->
-    <nav class="mobile-nav" id="mobileNav">
+
+    <!-- MOBILE NAV -->
+    <nav
+      class="mobile-nav"
+      id="mobileNav"
+      aria-label="Mobile navigation"
+    >
       <a href="#home">Home</a>
       <a href="#shop">Shop</a>
       <a href="#categories">Categories</a>
@@ -177,11 +503,10 @@
   </header>
 
 
-  <!-- =========================
-       SEARCH BAR
-  ========================== -->
+  <!-- SEARCH -->
   <div class="search-panel" id="searchPanel">
     <div class="container search-inner">
+
       <input
         type="search"
         id="searchInput"
@@ -189,19 +514,23 @@
         aria-label="Search products"
       />
 
-      <button id="closeSearch" aria-label="Close search">
+      <button
+        id="closeSearch"
+        type="button"
+        aria-label="Close search"
+      >
         &times;
       </button>
+
     </div>
   </div>
 
 
   <main>
 
-    <!-- =========================
-         SECTION 1 — HERO
-    ========================== -->
+    <!-- HERO -->
     <section class="hero" id="home">
+
       <div class="hero-background"></div>
 
       <div class="container hero-grid">
@@ -224,7 +553,11 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="#shop" class="button button-primary">
+
+            <a
+              href="#shop"
+              class="button button-primary"
+            >
               Shop Now
               <span>→</span>
             </a>
@@ -238,28 +571,35 @@
               <span class="whatsapp-icon">◔</span>
               Chat on WhatsApp
             </a>
+
           </div>
+
 
           <div class="hero-trust">
 
             <div class="trust-item">
               <div class="trust-icon">✓</div>
+
               <div>
                 <strong>100% Genuine</strong>
                 <span>Authentic Medicines</span>
               </div>
             </div>
 
+
             <div class="trust-item">
               <div class="trust-icon">↗</div>
+
               <div>
                 <strong>Fast Delivery</strong>
                 <span>Across Your City</span>
               </div>
             </div>
 
+
             <div class="trust-item">
               <div class="trust-icon">♧</div>
+
               <div>
                 <strong>Expert Support</strong>
                 <span>We're Here to Help</span>
@@ -267,6 +607,7 @@
             </div>
 
           </div>
+
         </div>
 
 
@@ -277,6 +618,7 @@
 
           <div class="medicine-bottle vitamin-bottle">
             <div class="bottle-cap"></div>
+
             <div class="bottle-body">
               <span>MEDVANCE</span>
               <strong>VITAMIN C</strong>
@@ -284,6 +626,7 @@
               <i>60 TABLETS</i>
             </div>
           </div>
+
 
           <div class="medicine-box">
             <div class="box-label">
@@ -294,8 +637,10 @@
             </div>
           </div>
 
+
           <div class="sanitizer">
             <div class="pump"></div>
+
             <div class="sanitizer-body">
               <span>MEDVANCE</span>
               <strong>HAND<br />SANITIZER</strong>
@@ -303,27 +648,42 @@
             </div>
           </div>
 
+
           <div class="hero-platform"></div>
 
         </div>
+
       </div>
     </section>
 
 
-    <!-- =========================
-         SECTION 2 — CATEGORIES
-    ========================== -->
-    <section class="categories-section section" id="categories">
+    <!-- CATEGORIES -->
+    <section
+      class="categories-section section"
+      id="categories"
+    >
+
       <div class="container">
 
         <div class="section-heading centered">
-          <span class="section-label">SHOP BY CATEGORY</span>
-          <h2>Everything You Need,<br />All in One Place.</h2>
+
+          <span class="section-label">
+            SHOP BY CATEGORY
+          </span>
+
+          <h2>
+            Everything You Need,
+            <br />
+            All in One Place.
+          </h2>
+
           <p>
             Find trusted healthcare essentials from our carefully
             selected range of pharmacy products.
           </p>
+
         </div>
+
 
         <div class="category-grid">
 
@@ -364,321 +724,659 @@
           </a>
 
         </div>
+
       </div>
     </section>
 
 
-    <!-- =========================
-         SECTION 3 — PRODUCTS
-    ========================== -->
-    <section class="products-section section" id="shop">
+    <!-- PRODUCTS -->
+    <section
+      class="products-section section"
+      id="shop"
+    >
+
       <div class="container">
 
         <div class="section-heading product-heading">
+
           <div>
-            <span class="section-label">OUR PRODUCTS</span>
+
+            <span class="section-label">
+              OUR PRODUCTS
+            </span>
+
             <h2>Featured Products</h2>
-            <p>Popular healthcare essentials trusted by our customers.</p>
+
+            <p>
+              Popular healthcare essentials trusted by our customers.
+            </p>
+
           </div>
 
+
           <div class="product-filters">
-            <button class="filter-button active" data-category="all">
+
+            <button
+              class="filter-button active"
+              type="button"
+              data-category="all"
+            >
               All
             </button>
 
-            <button class="filter-button" data-category="medicine">
+            <button
+              class="filter-button"
+              type="button"
+              data-category="medicine"
+            >
               Medicines
             </button>
 
-            <button class="filter-button" data-category="vitamins">
+            <button
+              class="filter-button"
+              type="button"
+              data-category="vitamins"
+            >
               Vitamins
             </button>
 
-            <button class="filter-button" data-category="personal">
+            <button
+              class="filter-button"
+              type="button"
+              data-category="personal"
+            >
               Personal Care
             </button>
+
           </div>
+
         </div>
 
-        <div class="products-grid" id="productsGrid">
 
-          <!-- Product 1 -->
-          <article class="product-card" data-category="medicine" data-name="Paracetamol 500mg">
+        <div
+          class="products-grid"
+          id="productsGrid"
+        >
+
+
+          <!-- PRODUCT 1 -->
+          <article
+            class="product-card"
+            data-category="medicine"
+            data-name="Paracetamol 500mg"
+          >
+
             <div class="product-image product-paracetamol">
+
               <div class="product-box-art">
+
                 <span>MEDVANCE</span>
                 <strong>PARACETAMOL</strong>
                 <small>500mg</small>
                 <em>24 TABLETS</em>
+
               </div>
+
             </div>
+
 
             <div class="product-info">
-              <span class="product-category">Pain Relief</span>
+
+              <span class="product-category">
+                Pain Relief
+              </span>
+
               <h3>Paracetamol 500mg</h3>
+
               <p>24 Tablets</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦1,200</strong>
-                <button class="add-cart" data-product="Paracetamol 500mg">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Paracetamol 500mg"
+                  data-price="1200"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
 
-          <!-- Product 2 -->
-          <article class="product-card" data-category="vitamins" data-name="Vitamin C 1000mg">
+          <!-- PRODUCT 2 -->
+          <article
+            class="product-card"
+            data-category="vitamins"
+            data-name="Vitamin C 1000mg"
+          >
+
             <div class="product-image">
+
               <div class="product-bottle-art">
+
                 <div class="cap"></div>
+
                 <div class="bottle">
+
                   <span>MEDVANCE</span>
                   <strong>VITAMIN C</strong>
                   <small>1000mg</small>
                   <em>60 TABLETS</em>
+
                 </div>
+
               </div>
+
             </div>
+
 
             <div class="product-info">
-              <span class="product-category">Vitamins</span>
+
+              <span class="product-category">
+                Vitamins
+              </span>
+
               <h3>Vitamin C 1000mg</h3>
+
               <p>60 Tablets</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦3,500</strong>
-                <button class="add-cart" data-product="Vitamin C 1000mg">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Vitamin C 1000mg"
+                  data-price="3500"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
 
-          <!-- Product 3 -->
-          <article class="product-card" data-category="medicine" data-name="Amoxicillin 500mg">
+          <!-- PRODUCT 3 -->
+          <article
+            class="product-card"
+            data-category="medicine"
+            data-name="Amoxicillin 500mg"
+          >
+
             <div class="product-image">
+
               <div class="product-box-art">
+
                 <span>MEDVANCE</span>
                 <strong>AMOXICILLIN</strong>
                 <small>500mg</small>
                 <em>21 CAPSULES</em>
+
               </div>
+
             </div>
+
 
             <div class="product-info">
-              <span class="product-category">Antibiotics</span>
+
+              <span class="product-category">
+                Antibiotics
+              </span>
+
               <h3>Amoxicillin 500mg</h3>
+
               <p>21 Capsules</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦2,800</strong>
-                <button class="add-cart" data-product="Amoxicillin 500mg">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Amoxicillin 500mg"
+                  data-price="2800"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
 
-          <!-- Product 4 -->
-          <article class="product-card" data-category="medicine" data-name="Omeprazole 20mg">
+          <!-- PRODUCT 4 -->
+          <article
+            class="product-card"
+            data-category="medicine"
+            data-name="Omeprazole 20mg"
+          >
+
             <div class="product-image">
+
               <div class="product-box-art teal">
+
                 <span>MEDVANCE</span>
                 <strong>OMEPRAZOLE</strong>
                 <small>20mg</small>
                 <em>14 CAPSULES</em>
+
               </div>
+
             </div>
 
+
             <div class="product-info">
-              <span class="product-category">Stomach Care</span>
+
+              <span class="product-category">
+                Stomach Care
+              </span>
+
               <h3>Omeprazole 20mg</h3>
+
               <p>14 Capsules</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦2,000</strong>
-                <button class="add-cart" data-product="Omeprazole 20mg">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Omeprazole 20mg"
+                  data-price="2000"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
 
-          <!-- Product 5 -->
-          <article class="product-card" data-category="personal" data-name="Hand Sanitizer 250ml">
+          <!-- PRODUCT 5 -->
+          <article
+            class="product-card"
+            data-category="personal"
+            data-name="Hand Sanitizer 250ml"
+          >
+
             <div class="product-image">
+
               <div class="sanitizer-art">
+
                 <div class="mini-pump"></div>
+
                 <div class="mini-bottle">
+
                   <span>MEDVANCE</span>
-                  <strong>HAND<br />SANITIZER</strong>
+                  <strong>
+                    HAND<br />
+                    SANITIZER
+                  </strong>
+
                   <small>250ml</small>
+
                 </div>
+
               </div>
+
             </div>
 
+
             <div class="product-info">
-              <span class="product-category">Personal Care</span>
+
+              <span class="product-category">
+                Personal Care
+              </span>
+
               <h3>Hand Sanitizer 250ml</h3>
+
               <p>250ml</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦1,800</strong>
-                <button class="add-cart" data-product="Hand Sanitizer 250ml">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Hand Sanitizer 250ml"
+                  data-price="1800"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
 
-          <!-- Product 6 -->
-          <article class="product-card" data-category="vitamins" data-name="Multivitamin Tablets">
+          <!-- PRODUCT 6 -->
+          <article
+            class="product-card"
+            data-category="vitamins"
+            data-name="Daily Multivitamin"
+          >
+
             <div class="product-image">
+
               <div class="product-bottle-art">
+
                 <div class="cap"></div>
+
                 <div class="bottle">
+
                   <span>MEDVANCE</span>
-                  <strong>MULTI<br />VITAMIN</strong>
+
+                  <strong>
+                    MULTI<br />
+                    VITAMIN
+                  </strong>
+
                   <small>Daily Support</small>
                   <em>60 TABLETS</em>
+
                 </div>
+
               </div>
+
             </div>
 
+
             <div class="product-info">
-              <span class="product-category">Vitamins</span>
+
+              <span class="product-category">
+                Vitamins
+              </span>
+
               <h3>Daily Multivitamin</h3>
+
               <p>60 Tablets</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦4,500</strong>
-                <button class="add-cart" data-product="Daily Multivitamin">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Daily Multivitamin"
+                  data-price="4500"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
 
-          <!-- Product 7 -->
-          <article class="product-card" data-category="personal" data-name="Moisturizing Body Lotion">
+          <!-- PRODUCT 7 -->
+          <article
+            class="product-card"
+            data-category="personal"
+            data-name="Moisturizing Lotion"
+          >
+
             <div class="product-image">
+
               <div class="lotion-art">
+
                 <div class="lotion-cap"></div>
+
                 <div class="lotion-body">
+
                   <span>MEDVANCE</span>
-                  <strong>MOISTURE<br />CARE</strong>
+
+                  <strong>
+                    MOISTURE<br />
+                    CARE
+                  </strong>
+
                   <small>Body Lotion</small>
+
                 </div>
+
               </div>
+
             </div>
+
 
             <div class="product-info">
-              <span class="product-category">Personal Care</span>
+
+              <span class="product-category">
+                Personal Care
+              </span>
+
               <h3>Moisturizing Lotion</h3>
+
               <p>400ml</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦3,200</strong>
-                <button class="add-cart" data-product="Moisturizing Lotion">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Moisturizing Lotion"
+                  data-price="3200"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
 
-          <!-- Product 8 -->
-          <article class="product-card" data-category="medicine" data-name="Ibuprofen 400mg">
+          <!-- PRODUCT 8 -->
+          <article
+            class="product-card"
+            data-category="medicine"
+            data-name="Ibuprofen 400mg"
+          >
+
             <div class="product-image">
+
               <div class="product-box-art">
+
                 <span>MEDVANCE</span>
                 <strong>IBUPROFEN</strong>
                 <small>400mg</small>
                 <em>24 TABLETS</em>
+
               </div>
+
             </div>
+
 
             <div class="product-info">
-              <span class="product-category">Pain Relief</span>
+
+              <span class="product-category">
+                Pain Relief
+              </span>
+
               <h3>Ibuprofen 400mg</h3>
+
               <p>24 Tablets</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦1,800</strong>
-                <button class="add-cart" data-product="Ibuprofen 400mg">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Ibuprofen 400mg"
+                  data-price="1800"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
 
-          <!-- Product 9 -->
-          <article class="product-card" data-category="vitamins" data-name="Omega 3 Capsules">
+          <!-- PRODUCT 9 -->
+          <article
+            class="product-card"
+            data-category="vitamins"
+            data-name="Omega 3 Capsules"
+          >
+
             <div class="product-image">
+
               <div class="product-bottle-art">
+
                 <div class="cap"></div>
+
                 <div class="bottle">
+
                   <span>MEDVANCE</span>
                   <strong>OMEGA 3</strong>
                   <small>1000mg</small>
                   <em>60 CAPSULES</em>
+
                 </div>
+
               </div>
+
             </div>
+
 
             <div class="product-info">
-              <span class="product-category">Supplements</span>
+
+              <span class="product-category">
+                Supplements
+              </span>
+
               <h3>Omega 3 Capsules</h3>
+
               <p>60 Capsules</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦5,000</strong>
-                <button class="add-cart" data-product="Omega 3 Capsules">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Omega 3 Capsules"
+                  data-price="5000"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
 
-          <!-- Product 10 -->
-          <article class="product-card" data-category="personal" data-name="Antibacterial Hand Wash">
+          <!-- PRODUCT 10 -->
+          <article
+            class="product-card"
+            data-category="personal"
+            data-name="Antibacterial Hand Wash"
+          >
+
             <div class="product-image">
+
               <div class="lotion-art wash">
+
                 <div class="lotion-cap"></div>
+
                 <div class="lotion-body">
+
                   <span>MEDVANCE</span>
-                  <strong>HAND<br />WASH</strong>
+
+                  <strong>
+                    HAND<br />
+                    WASH
+                  </strong>
+
                   <small>500ml</small>
+
                 </div>
+
               </div>
+
             </div>
+
 
             <div class="product-info">
-              <span class="product-category">Personal Care</span>
+
+              <span class="product-category">
+                Personal Care
+              </span>
+
               <h3>Antibacterial Hand Wash</h3>
+
               <p>500ml</p>
 
+
               <div class="product-bottom">
+
                 <strong>₦2,500</strong>
-                <button class="add-cart" data-product="Antibacterial Hand Wash">
+
+                <button
+                  class="add-cart"
+                  type="button"
+                  data-product="Antibacterial Hand Wash"
+                  data-price="2500"
+                >
                   Add to Cart
                 </button>
+
               </div>
+
             </div>
+
           </article>
 
         </div>
 
-        <div class="products-empty" id="productsEmpty">
+
+        <div
+          class="products-empty"
+          id="productsEmpty"
+        >
           <h3>No products found</h3>
           <p>Try another search or category.</p>
         </div>
@@ -687,57 +1385,77 @@
     </section>
 
 
-    <!-- =========================
-         SECTION 4 — WHY MEDVANCE
-    ========================== -->
-    <section class="why-section section" id="why-us">
+    <!-- WHY MEDVANCE -->
+    <section
+      class="why-section section"
+      id="why-us"
+    >
+
       <div class="container">
 
         <div class="section-heading centered">
-          <span class="section-label">WHY MEDVANCE</span>
+
+          <span class="section-label">
+            WHY MEDVANCE
+          </span>
+
           <h2>Healthcare You Can Trust.</h2>
+
           <p>
             We make getting the healthcare products you need
             simple, safe and convenient.
           </p>
+
         </div>
+
 
         <div class="benefits-grid">
 
           <div class="benefit-card">
             <div class="benefit-number">01</div>
             <div class="benefit-icon">✓</div>
+
             <h3>Quality Guaranteed</h3>
+
             <p>
               We source genuine and approved healthcare products
               from trusted suppliers.
             </p>
           </div>
 
+
           <div class="benefit-card">
             <div class="benefit-number">02</div>
             <div class="benefit-icon">⌁</div>
+
             <h3>Secure Shopping</h3>
+
             <p>
               Your information and shopping experience are
               handled with care and security.
             </p>
           </div>
 
+
           <div class="benefit-card">
             <div class="benefit-number">03</div>
             <div class="benefit-icon">→</div>
+
             <h3>Fast Delivery</h3>
+
             <p>
               Get your healthcare essentials delivered quickly
               and conveniently.
             </p>
           </div>
 
+
           <div class="benefit-card">
             <div class="benefit-number">04</div>
             <div class="benefit-icon">♡</div>
+
             <h3>Expert Support</h3>
+
             <p>
               Our team is available to help you make informed
               decisions about your healthcare needs.
@@ -745,19 +1463,23 @@
           </div>
 
         </div>
+
       </div>
     </section>
 
 
-    <!-- =========================
-         SECTION 5 — ABOUT
-    ========================== -->
-    <section class="about-section section" id="about">
+    <!-- ABOUT -->
+    <section
+      class="about-section section"
+      id="about"
+    >
+
       <div class="container about-grid">
 
         <div class="about-visual">
 
           <div class="about-card about-card-main">
+
             <div class="medical-cross">+</div>
 
             <span>MEDVANCE</span>
@@ -770,7 +1492,9 @@
             <p>
               Your trusted partner for everyday healthcare.
             </p>
+
           </div>
+
 
           <div class="about-card floating-card">
             <strong>100%</strong>
@@ -782,7 +1506,9 @@
 
         <div class="about-content">
 
-          <span class="section-label">ABOUT MEDVANCE</span>
+          <span class="section-label">
+            ABOUT MEDVANCE
+          </span>
 
           <h2>
             Better Healthcare,
@@ -800,6 +1526,7 @@
             essentials, we carefully select products that help
             individuals and families take better care of their health.
           </p>
+
 
           <div class="about-points">
 
@@ -820,7 +1547,11 @@
 
           </div>
 
-          <a href="#shop" class="button button-primary">
+
+          <a
+            href="#shop"
+            class="button button-primary"
+          >
             Explore Our Products
             <span>→</span>
           </a>
@@ -831,16 +1562,21 @@
     </section>
 
 
-    <!-- =========================
-         SECTION 6 — CONTACT / CTA
-    ========================== -->
-    <section class="contact-section section" id="contact">
+    <!-- CONTACT -->
+    <section
+      class="contact-section section"
+      id="contact"
+    >
+
       <div class="container">
 
         <div class="contact-card">
 
           <div class="contact-content">
-            <span class="section-label">NEED HELP?</span>
+
+            <span class="section-label">
+              NEED HELP?
+            </span>
 
             <h2>
               Have a Question About
@@ -861,11 +1597,18 @@
               Chat With Us on WhatsApp
               <span>→</span>
             </a>
+
           </div>
 
+
           <div class="contact-decoration">
+
             <div class="contact-circle"></div>
-            <div class="contact-cross">+</div>
+
+            <div class="contact-cross">
+              +
+            </div>
+
           </div>
 
         </div>
@@ -876,23 +1619,43 @@
   </main>
 
 
-  <!-- =========================
-       NEWSLETTER
-  ========================== -->
+  <!-- NEWSLETTER -->
   <section class="newsletter">
+
     <div class="container newsletter-inner">
 
       <div>
-        <span class="newsletter-icon">✉</span>
+
+        <span class="newsletter-icon">
+          ✉
+        </span>
 
         <div>
-          <strong>Stay updated with health tips & offers</strong>
-          <p>Subscribe to receive useful health information and special offers.</p>
+
+          <strong>
+            Stay updated with health tips & offers
+          </strong>
+
+          <p>
+            Subscribe to receive useful health information and special offers.
+          </p>
+
         </div>
+
       </div>
 
-      <form class="newsletter-form" id="newsletterForm">
-        <label class="sr-only" for="email">Email address</label>
+
+      <form
+        class="newsletter-form"
+        id="newsletterForm"
+      >
+
+        <label
+          class="sr-only"
+          for="email"
+        >
+          Email address
+        </label>
 
         <input
           type="email"
@@ -901,23 +1664,29 @@
           required
         />
 
-        <button type="submit">Subscribe</button>
+        <button type="submit">
+          Subscribe
+        </button>
+
       </form>
 
     </div>
+
   </section>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
+  <!-- FOOTER -->
   <footer class="footer">
 
     <div class="container footer-grid">
 
       <div class="footer-brand">
 
-        <a href="#home" class="logo footer-logo">
+        <a
+          href="#home"
+          class="logo footer-logo"
+        >
+
           <span class="logo-icon">
             <span></span>
             <span></span>
@@ -925,9 +1694,13 @@
 
           <span>
             <strong>MEDVANCE</strong>
-            <small>Advancing Health. Enhancing Lives.</small>
+            <small>
+              Advancing Health. Enhancing Lives.
+            </small>
           </span>
+
         </a>
+
 
         <p>
           Medvance Pharmacy is committed to providing genuine
@@ -935,7 +1708,9 @@
           customer service.
         </p>
 
+
         <div class="social-links">
+
           <a href="#" aria-label="Facebook">f</a>
           <a href="#" aria-label="Instagram">◎</a>
           <a href="#" aria-label="Twitter">𝕏</a>
@@ -948,12 +1723,14 @@
           >
             ◔
           </a>
+
         </div>
 
       </div>
 
 
       <div class="footer-column">
+
         <h3>Quick Links</h3>
 
         <a href="#home">Home</a>
@@ -962,10 +1739,12 @@
         <a href="#about">About Us</a>
         <a href="#why-us">Why Medvance</a>
         <a href="#contact">Contact</a>
+
       </div>
 
 
       <div class="footer-column">
+
         <h3>Categories</h3>
 
         <a href="#shop">Prescription Medicines</a>
@@ -974,10 +1753,12 @@
         <a href="#shop">Personal Care</a>
         <a href="#shop">Baby & Child Care</a>
         <a href="#shop">Health Devices</a>
+
       </div>
 
 
       <div class="footer-column">
+
         <h3>Customer Support</h3>
 
         <a href="#contact">FAQs</a>
@@ -985,23 +1766,30 @@
         <a href="#contact">Returns & Refunds</a>
         <a href="#contact">Terms & Conditions</a>
         <a href="#contact">Privacy Policy</a>
+
       </div>
 
 
       <div class="footer-column">
+
         <h3>Get in Touch</h3>
 
-        <a href="tel:+2349012345678">
-          +234 901 234 5678
+        <a href="tel:+23491669826418">
+          +234 916 6982 6418
         </a>
 
         <a href="mailto:hello@medvance.com">
           hello@medvance.com
         </a>
 
-        <span>Lagos, Nigeria</span>
+        <span>
+          Lagos, Nigeria
+        </span>
 
-        <span>Mon - Sat: 8:00AM - 8:00PM</span>
+        <span>
+          Mon - Sat: 8:00AM - 8:00PM
+        </span>
+
       </div>
 
     </div>
@@ -1010,7 +1798,8 @@
     <div class="container footer-bottom">
 
       <p>
-        © <span id="year"></span> Medvance Pharmacy.
+        © <span id="year"></span>
+        Medvance Pharmacy.
         All rights reserved.
       </p>
 
@@ -1023,63 +1812,99 @@
   </footer>
 
 
-  <!-- =========================
+  <!-- =====================================================
        CART DRAWER
-  ========================== -->
-  <aside class="cart-drawer" id="cartDrawer">
+  ====================================================== -->
+
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+    aria-label="Shopping cart"
+    aria-hidden="true"
+  >
 
     <div class="cart-header">
+
       <div>
+
         <span>YOUR CART</span>
-        <h2>Shopping Cart</h2>
+
+        <h2>
+          Shopping Cart
+        </h2>
+
       </div>
 
-      <button id="closeCart" aria-label="Close cart">
+
+      <button
+        id="closeCart"
+        type="button"
+        aria-label="Close cart"
+      >
         &times;
       </button>
+
     </div>
 
-    <div class="cart-items" id="cartItems">
-      <div class="empty-cart">
-        <div>🛒</div>
-        <h3>Your cart is empty</h3>
-        <p>Add products to get started.</p>
-      </div>
+
+    <div
+      class="cart-items"
+      id="cartItems"
+    >
+      <!-- JavaScript renders cart items here -->
     </div>
+
 
     <div class="cart-footer">
 
       <div class="cart-total">
-        <span>Total</span>
-        <strong id="cartTotal">₦0</strong>
+
+        <span>
+          Total
+        </span>
+
+        <strong id="cartTotal">
+          ₦0
+        </strong>
+
       </div>
 
+
       <a
-        href="https://wa.me/2349012345678?text=Hello%20Medvance%20Pharmacy,%20I%20would%20like%20to%20place%20an%20order."
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#"
+        id="checkoutButton"
         class="button button-primary checkout-button"
       >
-        Order via WhatsApp
-        <span>→</span>
+        <span>
+          Order via WhatsApp
+        </span>
+
+        <span>
+          →
+        </span>
       </a>
 
+
       <small>
-        This is a static storefront. Orders are completed through WhatsApp.
+        Orders are completed securely through WhatsApp.
       </small>
 
     </div>
 
   </aside>
 
-  <div class="overlay" id="overlay"></div>
+
+  <!-- CART OVERLAY -->
+  <div
+    class="cart-overlay"
+    id="cartOverlay"
+    aria-hidden="true"
+  ></div>
 
 
-  <!-- =========================
-       FLOATING WHATSAPP
-  ========================== -->
+  <!-- FLOATING WHATSAPP -->
   <a
-    href="https://wa.me/2349012345678?text=Hello%20Medvance%20Pharmacy,%20I%20would%20like%20to%20make%20an%20enquiry."
+    href="https://wa.me/23491669826418?text=Hello%20Medvance%20Pharmacy,%20I%20would%20like%20to%20make%20an%20enquiry."
     target="_blank"
     rel="noopener noreferrer"
     class="floating-whatsapp"
@@ -1089,13 +1914,20 @@
   </a>
 
 
-  <div class="toast" id="toast">
+  <!-- TOAST -->
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  >
     <span>✓</span>
     <p>Product added to cart.</p>
   </div>
 
 
-  <script src="script.js"></script>
+  <!-- JAVASCRIPT -->
+  <script src="./script.js"></script>
 
 </body>
 </html>
