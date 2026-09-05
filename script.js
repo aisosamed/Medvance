@@ -786,7 +786,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     let message =
-      "Hello Medvance Pharmacy,%0A%0A";
+      "Hello MedVanceNg,%0A%0A";
 
     message +=
       "I would like to place an order:%0A%0A";
@@ -991,6 +991,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* =====================================================
      PRODUCT FILTERS
+
+     NOTE: scoped to #productsGrid only, so filtering
+     or searching the shop grid does not also hide the
+     GLP-1 catalogue cards elsewhere on the page.
   ====================================================== */
 
   let selectedCategory =
@@ -1062,7 +1066,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const products =
       document.querySelectorAll(
-        ".product-card"
+        "#productsGrid .product-card"
       );
 
 

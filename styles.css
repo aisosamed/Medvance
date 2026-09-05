@@ -1,12 +1,12 @@
 /* ==========================================
-   MEDVANCE PHARMACY
+   MEDVANCENG
    Modern Static Ecommerce Website
 ========================================== */
 
 :root {
-  --primary: #d81b60;
-  --primary-dark: #b91350;
-  --primary-light: #fce7ef;
+  --primary: #E1409B;
+  --primary-dark: #C43080;
+  --primary-light: #FCE6F2;
 
   --brown: #a98b7b;
   --brown-dark: #80685c;
@@ -381,7 +381,7 @@ img {
   background-image:
     radial-gradient(
       circle at 15% 30%,
-      rgba(216, 27, 96, 0.12),
+      rgba(225, 64, 155, 0.12),
       transparent 30%
     ),
     radial-gradient(
@@ -409,7 +409,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: var(--primary);
+  color: var(--primary-dark);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -469,7 +469,7 @@ img {
 .button-primary {
   color: white;
   background: var(--primary);
-  box-shadow: 0 10px 25px rgba(216, 27, 96, 0.18);
+  box-shadow: 0 10px 25px rgba(225, 64, 155, 0.25);
 }
 
 .button-primary:hover {
@@ -561,7 +561,7 @@ img {
 .circle-two {
   width: 270px;
   height: 270px;
-  background: rgba(216, 27, 96, 0.05);
+  background: rgba(225, 64, 155, 0.05);
   right: 130px;
   top: 120px;
 }
@@ -664,7 +664,7 @@ img {
 }
 
 .medicine-box::before {
-  content: "MEDVANCE";
+  content: "MEDVANCENG";
   position: absolute;
   top: 20px;
   left: 0;
@@ -778,7 +778,7 @@ img {
 }
 
 .section-label {
-  color: var(--primary);
+  color: var(--primary-dark);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -830,7 +830,7 @@ img {
 }
 
 .category-card:hover {
-  border-color: rgba(216, 27, 96, 0.3);
+  border-color: rgba(225, 64, 155, 0.3);
   transform: translateY(-5px);
   box-shadow: var(--shadow);
 }
@@ -838,7 +838,7 @@ img {
 .category-icon {
   width: 48px;
   height: 48px;
-  border: 1px solid rgba(216, 27, 96, 0.35);
+  border: 1px solid rgba(225, 64, 155, 0.35);
   color: var(--primary);
   border-radius: 12px;
   display: grid;
@@ -1155,7 +1155,7 @@ img {
 }
 
 .product-bottom strong {
-  color: var(--primary);
+  color: var(--primary-dark);
   font-size: 15px;
 }
 
@@ -1286,12 +1286,12 @@ img {
     linear-gradient(
       145deg,
       var(--primary),
-      #b80f51
+      #A82D74
     );
   color: white;
   border-radius: 25px;
   padding: 45px;
-  box-shadow: 30px 30px 60px rgba(120, 50, 70, 0.18);
+  box-shadow: 30px 30px 60px rgba(150, 40, 100, 0.18);
   transform: rotate(-3deg);
 }
 
@@ -1417,7 +1417,7 @@ img {
     ),
     linear-gradient(
       115deg,
-      #bd1457,
+      #B23271,
       var(--primary)
     );
   color: white;
@@ -1658,6 +1658,16 @@ img {
 
 /* ==========================================
    CART DRAWER
+
+   NOTE: These rules are legacy/unused. The
+   cart markup and interactions actually use
+   class names defined in the inline <style>
+   block inside index.html's <head> (cart-open,
+   cart-overlay-visible, cart-empty-state,
+   cart-item-info, etc). Kept here only so
+   nothing breaks if referenced elsewhere;
+   safe to delete once the inline block is
+   migrated into this file.
 ========================================== */
 
 .overlay {
