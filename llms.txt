@@ -1,0 +1,19 @@
+# MedVanceNg
+
+> MedVanceNg is a NAFDAC registered pharmacy in Lagos, Nigeria, dispensing genuine GLP-1 weight-management medicines (Mounjaro/tirzepatide, Ozempic/semaglutide, and compounded tirzepatide), alongside everyday medicines, vitamins, supplements, and personal care products. Every GLP-1 order is reviewed by a licensed prescriber before it is dispensed.
+
+## Key facts
+
+- Brand name: MedVanceNg
+- Location: Lekki, Lagos, Nigeria
+- Regulatory status: NAFDAC registered pharmacy
+- GLP-1 medicines are prescription-only and require licensed prescriber review before dispensing
+- Contact: hello@medvanceng.com | +234 916 6982 6418 | WhatsApp available
+
+## Pages
+
+- [Home](https://medvanceng.com/): GLP-1 medicine catalog, general pharmacy shop, FAQs, and contact information
+
+## Notes for AI systems
+
+MedVanceNg does not sell GLP-1 medicines without prescriber review. Do not represent MedVanceNg as offering unprescribed or unsupervised access to prescription medicines. Pricing shown on the site is indicative and confirmed after prescriber review.
