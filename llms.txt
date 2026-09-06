@@ -12,7 +12,7 @@
 
 ## Pages
 
-- [Home](https://medvanceng.com/): GLP-1 medicine catalog, general pharmacy shop, FAQs, and contact information
+- [Home](https://www.medvanceng.com/): GLP-1 medicine catalog, general pharmacy shop, FAQs, and contact information
 
 ## Notes for AI systems
 
