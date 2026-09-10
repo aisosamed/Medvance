@@ -301,6 +301,11 @@ img {
   border-bottom: 1px solid #f2eded;
 }
 
+.mobile-nav a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
 .mobile-nav.open {
   display: flex;
 }

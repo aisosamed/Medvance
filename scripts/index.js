@@ -1,5 +1,112 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* =====================================================
+     NAVIGATION INDICATOR
+  ====================================================== */
+
+  const navigationLinks = document.querySelectorAll(
+    ".desktop-nav a, .mobile-nav a",
+  );
+  const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
+  const sectionLinks = new Map();
+
+  function setActiveNavigation(link) {
+    if (!link) {
+      return;
+    }
+
+    const activeTarget = new URL(link.href, window.location.href);
+
+    navigationLinks.forEach((navigationLink) => {
+      const navigationTarget = new URL(
+        navigationLink.href,
+        window.location.href,
+      );
+      const isActive =
+        navigationTarget.pathname === activeTarget.pathname &&
+        navigationTarget.hash === activeTarget.hash;
+
+      navigationLink.classList.toggle("active", isActive);
+
+      if (isActive) {
+        navigationLink.setAttribute("aria-current", "page");
+      } else {
+        navigationLink.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function getLinkTarget(link) {
+    const target = new URL(link.href, window.location.href);
+    const targetPath = target.pathname.replace(/\/+$/, "") || "/";
+
+    if (targetPath !== currentPath || !target.hash) {
+      return null;
+    }
+
+    return document.getElementById(target.hash.slice(1));
+  }
+
+  navigationLinks.forEach((link) => {
+    const target = getLinkTarget(link);
+
+    if (target) {
+      sectionLinks.set(target.id, link);
+    }
+
+    link.addEventListener("click", () => {
+      const targetLink = target || link;
+
+      setActiveNavigation(targetLink);
+    });
+  });
+
+  const currentPageLink = Array.from(navigationLinks).find((link) => {
+    const target = new URL(link.href, window.location.href);
+    const targetPath = target.pathname.replace(/\/+$/, "") || "/";
+
+    return targetPath === currentPath && !target.hash;
+  });
+
+  if (window.location.hash) {
+    const hashTarget = document.getElementById(window.location.hash.slice(1));
+    const hashLink = hashTarget && sectionLinks.get(hashTarget.id);
+
+    if (hashLink) {
+      setActiveNavigation(hashLink);
+    } else if (currentPageLink) {
+      setActiveNavigation(currentPageLink);
+    }
+  } else if (currentPageLink) {
+    setActiveNavigation(currentPageLink);
+  }
+
+  if (sectionLinks.size > 0) {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        const visibleSection = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
+
+        if (visibleSection) {
+          setActiveNavigation(sectionLinks.get(visibleSection.target.id));
+        }
+      },
+      {
+        rootMargin: "-20% 0px -65% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      },
+    );
+
+    sectionLinks.forEach((link, sectionId) => {
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+        sectionObserver.observe(section);
+      }
+    });
+  }
+
+  /* =====================================================
      MEDVANCE CART
   ====================================================== */
 
