@@ -1,0 +1,29 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Pharmacy",
+  "name": "MedVanceNg",
+  "url": "https://medvanceng.com/",
+  "description": "NAFDAC registered pharmacy in Lagos, Nigeria dispensing genuine medicines, GLP-1 weight-management medicines (Mounjaro, Ozempic, compounded tirzepatide), vitamins, supplements and personal care essentials, with every GLP-1 order reviewed by our licensed prescriber.",
+  "telephone": "+2349169826418",
+  "priceRange": "₦₦",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lekki, Lagos",
+    "addressCountry": "NG"
+  },
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "NAFDAC Registration",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "National Agency for Food and Drug Administration and Control (NAFDAC)"
+    }
+  },
+  "medicalSpecialty": "Weight Management",
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "GLP-1 Prescriber Consultation"
+    }
+  ]
+}

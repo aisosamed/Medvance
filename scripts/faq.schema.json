@@ -1,0 +1,38 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Mounjaro or Ozempic legally available in Nigeria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Mounjaro (tirzepatide) and Ozempic (semaglutide) can be legally dispensed in Nigeria as prescription only medicines through a Licensed  pharmacy, after review by a licensed prescriber."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is compounded tirzepatide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compounded tirzepatide is tirzepatide prepared by a licensed compounding pharmacy rather than the branded manufacturer. It is dispensed only under prescriber supervision, and suitability is assessed on a case by case basis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a medical consultant to access me first to buy GLP-1 medicines in Nigeria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. GLP-1 medicines including Mounjaro, Ozempic and tirzepatide are prescription only. Our licensed prescriber reviews your health information before any order is dispensed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tirzepatide doses are available?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compounded tirzepatide is commonly available in 2.5mg, 5mg and 10mg strengths. We offer individualized personal counselling which determines the appropriate starting dose and any adjustments is based on your health assessment."
+      }
+    }
+  ]
+}
