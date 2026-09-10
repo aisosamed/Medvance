@@ -92,29 +92,30 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (sectionLinks.size > 0) {
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        const visibleSection = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
+    const trackedSections = Array.from(sectionLinks, ([sectionId, link]) => ({
+      link,
+      section: document.getElementById(sectionId),
+    })).filter(({ section }) => section);
 
-        if (visibleSection) {
-          setActiveNavigation(sectionLinks.get(visibleSection.target.id));
-        }
-      },
-      {
-        rootMargin: "-20% 0px -65% 0px",
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-      },
-    );
+    function updateActiveSection() {
+      const navigationBottom =
+        document.querySelector(".navbar")?.getBoundingClientRect().bottom || 0;
+      const currentSection = trackedSections
+        .filter(({ section }) => section.getBoundingClientRect().top <= navigationBottom)
+        .sort(
+          (first, second) =>
+            second.section.getBoundingClientRect().top -
+            first.section.getBoundingClientRect().top,
+        )[0];
 
-    sectionLinks.forEach((link, sectionId) => {
-      const section = document.getElementById(sectionId);
-
-      if (section) {
-        sectionObserver.observe(section);
+      if (currentSection) {
+        setActiveNavigation(currentSection.link);
       }
-    });
+    }
+
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+    updateActiveSection();
   }
 
   /* =====================================================
