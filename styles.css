@@ -1657,6 +1657,84 @@ img {
 
 
 /* ==========================================
+   FOUNDERS BIO
+========================================== */
+
+.founders-bio {
+  background: var(--brown-light);
+  padding: 70px 0;
+}
+
+.founders-bio-grid {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.95fr) minmax(480px, 1.2fr);
+  gap: 50px;
+  align-items: center;
+}
+
+.founders-bio-image {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.founders-bio-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 30px;
+  object-fit: cover;
+  height: 420px;
+  box-shadow: var(--shadow);
+  border: 5px solid white;
+}
+
+.founders-bio-content {
+  max-width: 620px;
+}
+
+.founders-bio-content .section-label {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.founders-bio-content h2 {
+  color: var(--black);
+  font-size: clamp(32px, 3vw, 44px);
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+
+.founders-bio-content p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0 0 16px;
+}
+
+.founders-bio-intro {
+  font-size: 14px !important;
+  color: var(--text) !important;
+}
+
+@media (max-width: 768px) {
+  .founders-bio-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .founders-bio-image {
+    min-height: auto;
+  }
+
+  .founders-bio-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ==========================================
    CART DRAWER
 
    NOTE: These rules are legacy/unused. The
