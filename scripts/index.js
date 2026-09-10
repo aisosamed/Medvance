@@ -6,8 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const navigationLinks = document.querySelectorAll(
     ".desktop-nav a, .mobile-nav a",
   );
-  const currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
   const sectionLinks = new Map();
+
+  function normalizePath(path) {
+    const normalizedPath = path.replace(/\/+$/, "") || "/";
+
+    return normalizedPath === "/index.html" ? "/" : normalizedPath;
+  }
+
+  const currentPath = normalizePath(window.location.pathname);
 
   function setActiveNavigation(link) {
     if (!link) {
@@ -37,10 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getLinkTarget(link) {
     const target = new URL(link.href, window.location.href);
-    const targetPath = target.pathname.replace(/\/+$/, "") || "/";
+    const targetPath = normalizePath(target.pathname);
 
-    if (targetPath !== currentPath || !target.hash) {
+    if (targetPath !== currentPath) {
       return null;
+    }
+
+    if (!target.hash) {
+      return document.getElementById("home");
     }
 
     return document.getElementById(target.hash.slice(1));
@@ -62,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const currentPageLink = Array.from(navigationLinks).find((link) => {
     const target = new URL(link.href, window.location.href);
-    const targetPath = target.pathname.replace(/\/+$/, "") || "/";
+    const targetPath = normalizePath(target.pathname);
 
-    return targetPath === currentPath && !target.hash;
+    return targetPath === currentPath && target.hash === "";
   });
 
   if (window.location.hash) {
