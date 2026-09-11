@@ -771,13 +771,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNav = document.getElementById("mobileNav");
 
   if (mobileMenuButton && mobileNav) {
+    const setMenuState = (isOpen) => {
+      mobileNav.classList.toggle("open", isOpen);
+      mobileMenuButton.classList.toggle("is-active", isOpen);
+      mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+      mobileMenuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close menu" : "Open menu",
+      );
+    };
+
     mobileMenuButton.addEventListener("click", () => {
-      mobileNav.classList.toggle("open");
+      const isOpen = !mobileNav.classList.contains("open");
+      setMenuState(isOpen);
     });
 
     mobileNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        mobileNav.classList.remove("open");
+        setMenuState(false);
       });
     });
   }
@@ -815,17 +826,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCart();
 
   filterProducts();
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const year = document.getElementById("year");
-  if (year) year.textContent = new Date().getFullYear();
-
-  const mobileMenuButton = document.getElementById("mobileMenuButton");
-  const mobileNav = document.getElementById("mobileNav");
-  if (mobileMenuButton && mobileNav) {
-    mobileMenuButton.addEventListener("click", () => {
-      mobileNav.classList.toggle("open");
-    });
-  }
 });

@@ -281,6 +281,21 @@ img {
   width: 19px;
   height: 2px;
   background: var(--black);
+  transition: transform 0.22s ease, opacity 0.22s ease;
+  transform-origin: center;
+}
+
+.mobile-menu-button.is-active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-button.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mobile-menu-button.is-active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* ==========================================
