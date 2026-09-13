@@ -1,5 +1,11 @@
 {
   "outputDirectory": ".",
   "cleanUrls": false,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/blog/(.*)",
+      "dest": "/blogs/$1"
+    }
+  ]
 }
