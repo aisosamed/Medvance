@@ -3,6 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
      NAVIGATION INDICATOR
   ====================================================== */
 
+  // Add box shadow only when user scrolls and remove when not at the top
+  // box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  const nav = document.querySelector(".navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      nav.style.boxShadow = "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px";
+    } else {
+      nav.style.boxShadow = "none";
+    }
+  });
+
+  /* =====================================================
+     NAVIGATION INDICATOR
+  ====================================================== */
+
   const navigationLinks = document.querySelectorAll(
     ".desktop-nav a, .mobile-nav a",
   );
@@ -96,7 +111,10 @@ document.addEventListener("DOMContentLoaded", () => {
       (entries) => {
         const visibleSection = entries
           .filter((entry) => entry.isIntersecting)
-          .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
+          .sort(
+            (first, second) =>
+              second.intersectionRatio - first.intersectionRatio,
+          )[0];
 
         if (visibleSection) {
           setActiveNavigation(sectionLinks.get(visibleSection.target.id));

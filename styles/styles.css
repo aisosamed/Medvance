@@ -766,7 +766,7 @@ img {
    GENERAL SECTIONS
 ========================================== */
 
-body:not(.home) main {
+main:not(.home) {
   margin-block: 40px;
   margin-inline: 0;
 }
