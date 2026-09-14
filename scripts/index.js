@@ -1,5 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   /* =====================================================
+     NAVBAR SCROLL SHADOW
+  ====================================================== */
+
+  // Add box shadow only when user scrolls and remove when not at the top
+  // box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  const nav = document.querySelector(".navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      nav.style.boxShadow = "rgba(33, 35, 38, 0.1) 0px 10px 10px -10px";
+    } else {
+      nav.style.boxShadow = "none";
+    }
+  });
+
+  /* =====================================================
      NAVIGATION INDICATOR
   ====================================================== */
 
