@@ -281,7 +281,9 @@ img {
   width: 19px;
   height: 2px;
   background: var(--black);
-  transition: transform 0.22s ease, opacity 0.22s ease;
+  transition:
+    transform 0.22s ease,
+    opacity 0.22s ease;
   transform-origin: center;
 }
 
@@ -1760,6 +1762,7 @@ body:not(.home) main {
 
   .mobile-menu-button {
     display: flex;
+    justify-content: center;
   }
 
   .hero-grid {
