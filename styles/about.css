@@ -2,15 +2,29 @@
    ABOUT
 ========================================== */
 
-.about-section {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   background: var(--brown-light);
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 100px;
-  align-items: center;
+
+.about-section {
+  background: var(--brown-light);
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+    align-items: center;
+  }
 }
 
 .about-visual {
@@ -21,14 +35,12 @@
 }
 
 .about-card-main {
-  width: 370px;
-  height: 360px;
+  width: 300px;
+  height: 400px;
   background:
-    radial-gradient(
-      circle at 80% 20%,
+    radial-gradient(circle at 80% 20%,
       rgba(255, 255, 255, 0.2),
-      transparent 30%
-    ),
+      transparent 30%),
     linear-gradient(145deg, var(--primary), #a82d74);
   color: white;
   border-radius: 25px;
@@ -48,7 +60,7 @@
   margin-bottom: 50px;
 }
 
-.about-card-main > span {
+.about-card-main>span {
   font-size: 10px;
   letter-spacing: 2px;
 }
@@ -94,6 +106,12 @@
   max-width: 570px;
 }
 
+.about-content>span {
+  display: block;
+  margin-top: 40px;
+}
+
+
 .about-content h2 span {
   color: var(--primary);
   display: block;
@@ -105,7 +123,7 @@
   margin-top: 25px !important;
 }
 
-.about-content > p {
+.about-content>p {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.8;
