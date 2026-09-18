@@ -22,6 +22,51 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
     <script src="./scripts/index.js" defer></script>
+    <style>
+      .seo-visuals {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin: 2rem 0 0.5rem;
+      }
+
+      .seo-product-shot {
+        background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(246,248,255,0.96));
+        border: 1px solid rgba(17, 24, 39, 0.08);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 16px 35px rgba(31, 41, 55, 0.08);
+      }
+
+      .seo-product-shot img {
+        display: block;
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        background: #eef3ff;
+      }
+
+      .seo-product-shot span {
+        display: block;
+        padding: 0.9rem 1rem 1.1rem;
+        font-weight: 700;
+        color: #202a3d;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+      }
+
+      @media (max-width: 768px) {
+        .seo-visuals {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .seo-product-shot img {
+          height: 220px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="navbar">
@@ -35,7 +80,7 @@
         </a>
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="/">Home</a>
-          <a href="/shop.html">Shop</a>
+          <a href="/#glp1">GLP-1 &amp; Tirzepatide</a>
           <a href="/about.html">About Us</a>
           <a href="/blogs/glp1-weight-loss-nigeria.html">Blog</a>
           <a href="/#contact">Contact</a>
@@ -61,7 +106,18 @@
 
         <div class="cta-row" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
           <a href="https://wa.me/2349169826418?text=Hello%20MedVanceNg,%20I%20want%20to%20buy%20Tirzepatide%20in%20Nigeria." class="button primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
-          <a href="/shop.html" class="button secondary">View all products</a>
+          <a href="/#glp1" class="button secondary">Browse products</a>
+        </div>
+
+        <div class="seo-visuals" aria-label="Tirzepatide product images">
+          <div class="seo-product-shot">
+            <img src="assets/images/mvpep-5mg.png" alt="Compounded tirzepatide 5mg vial for medical weight loss support in Nigeria" loading="lazy" />
+            <span>COMPOUNDED TIRZEPATIDE 5MG</span>
+          </div>
+          <div class="seo-product-shot">
+            <img src="assets/images/mvpep-10mg.png" alt="Compounded tirzepatide 10mg vial for medically guided care in Nigeria" loading="lazy" />
+            <span>COMPOUNDED TIRZEPATIDE 10MG</span>
+          </div>
         </div>
       </section>
 
@@ -96,7 +152,7 @@
       <section class="section">
         <div class="cta-row" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem;">
           <a href="https://wa.me/2349169826418?text=Hello%20MedVanceNg,%20I%20want%20to%20check%20if%20I%20qualify%20for%20Tirzepatide%20in%20Nigeria." class="button primary" target="_blank" rel="noopener">Request a medical review</a>
-          <a href="/shop.html" class="button secondary">Browse products</a>
+          <a href="/#glp1" class="button secondary">Browse products</a>
         </div>
       </section>
     </main>

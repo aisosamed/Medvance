@@ -25,6 +25,51 @@
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./styles/cart.css" />
     <script src="./scripts/index.js" defer></script>
+    <style>
+      .seo-visuals {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin: 2rem 0 0.5rem;
+      }
+
+      .seo-product-shot {
+        background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(246,248,255,0.96));
+        border: 1px solid rgba(17, 24, 39, 0.08);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 16px 35px rgba(31, 41, 55, 0.08);
+      }
+
+      .seo-product-shot img {
+        display: block;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        background: #eef3ff;
+      }
+
+      .seo-product-shot span {
+        display: block;
+        padding: 0.9rem 1rem 1.1rem;
+        font-weight: 700;
+        color: #202a3d;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+      }
+
+      @media (max-width: 768px) {
+        .seo-visuals {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .seo-product-shot img {
+          height: 200px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="navbar">
@@ -38,7 +83,7 @@
         </a>
         <nav class="desktop-nav" aria-label="Main navigation">
           <a href="/">Home</a>
-          <a href="/shop.html">Shop</a>
+          <a href="/#glp1">GLP-1 &amp; Tirzepatide</a>
           <a href="/about.html">About Us</a>
           <a href="/blogs/glp1-weight-loss-nigeria.html">Blog</a>
           <a href="/#contact">Contact</a>
@@ -64,7 +109,22 @@
 
         <div class="cta-row" style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
           <a href="https://wa.me/2349169826418?text=Hello%20MedVanceNg,%20I%20want%20to%20learn%20about%20GLP-1%20medications%20in%20Nigeria." class="button primary" target="_blank" rel="noopener">Ask a clinician</a>
-          <a href="/shop.html" class="button secondary">Browse products</a>
+          <a href="/#glp1" class="button secondary">Browse products</a>
+        </div>
+
+        <div class="seo-visuals" aria-label="GLP-1 product images">
+          <div class="seo-product-shot">
+            <img src="assets/images/mounjaro-5mg.jpeg" alt="Mounjaro 5mg tirzepatide pen" loading="lazy" />
+            <span>MOUNJARO</span>
+          </div>
+          <div class="seo-product-shot">
+            <img src="assets/images/ozempic-1mg.jpeg" alt="Ozempic 1mg semaglutide pen" loading="lazy" />
+            <span>OZEMPIC</span>
+          </div>
+          <div class="seo-product-shot">
+            <img src="assets/images/retatrutide-10mg.png" alt="Retatrutide 10mg product image" loading="lazy" />
+            <span>RETATRUTIDE</span>
+          </div>
         </div>
       </section>
 
