@@ -554,6 +554,109 @@ img {
   color: var(--muted);
 }
 
+.lead-strip {
+  background: linear-gradient(135deg, #fffafc 0%, #fff3f7 50%, #fef7f1 100%);
+  border-top: 1px solid rgba(225, 64, 155, 0.08);
+  border-bottom: 1px solid rgba(225, 64, 155, 0.08);
+}
+
+.lead-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 0;
+}
+
+.lead-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(225, 64, 155, 0.15);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.lead-pill strong {
+  color: var(--black);
+  font-size: 14px;
+}
+
+.lead-pill span {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.lead-cta {
+  white-space: nowrap;
+}
+
+.conversion-section {
+  background: white;
+  padding-top: 60px;
+}
+
+.conversion-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.conversion-copy {
+  background: linear-gradient(180deg, #fffafc, #fff6f0);
+  border: 1px solid rgba(225, 64, 155, 0.1);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.conversion-copy p {
+  color: var(--muted);
+  margin: 18px 0 24px;
+  max-width: 480px;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.how-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px 18px;
+  box-shadow: 0 12px 30px rgba(22, 10, 30, 0.04);
+}
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--primary-light);
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.how-card h3 {
+  font-size: 18px;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.how-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
 /* ==========================================
    HERO PRODUCT ART
 ========================================== */
