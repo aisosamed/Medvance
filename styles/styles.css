@@ -502,6 +502,15 @@ img {
   font-size: 17px;
 }
 
+.button-whatsapp svg,
+.whatsapp-icon svg,
+.email-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  color: currentColor;
+}
+
 .whatsapp-icon {
   font-size: 19px !important;
 }
