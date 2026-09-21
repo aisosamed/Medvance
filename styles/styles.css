@@ -138,7 +138,7 @@ img {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1px;
 }
 
 .logo > span:last-child {
@@ -404,10 +404,11 @@ img {
 .hero-grid {
   min-height: 610px;
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 40px;
   align-items: center;
-  position: relative;
-  z-index: 2;
+  osition: relative;
+  -index: 2;
 }
 
 .hero-content {
@@ -562,11 +563,21 @@ img {
 
 .lead-strip-inner {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
   align-items: center;
   gap: 18px;
   padding: 20px 0;
 }
+
+@media (min-width: 1024px) {
+  .lead-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 0;
+ }
+}
+
 
 .lead-pill {
   display: flex;
@@ -599,9 +610,18 @@ img {
 
 .conversion-grid {
   display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+
+@media (min-width: 1024px) {
+.conversion-grid {
+  display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 32px;
   align-items: center;
+ }
 }
 
 .conversion-copy {
@@ -1349,6 +1369,48 @@ main:not(.home) {
   overflow: hidden;
 }
 
+.benefit-card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Card 01: NAFDAC Registered */
+.benefit-card:nth-child(1) {
+  background-image: url("/assets/images/nafdac.jpeg");
+}
+
+/* Card 02: Secure Shopping */
+.benefit-card:nth-child(2) {
+  background-image: url("/assets/images/cart.jpeg");
+}
+
+/* Card 03: Fast Delivery */
+.benefit-card:nth-child(3) {
+  background-image: url("/assets/images/delivery.jpeg");
+}
+
+/* Card 04: Licensed Prescriber Review */
+.benefit-card:nth-child(4) {
+  background-image: url("/assets/images/review.jpg");
+}
+
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+}
+
+.benefit-card > * {
+  position: relative;
+  z-index: 1;
+}
+
 .benefit-number {
   position: absolute;
   right: 20px;
@@ -1375,13 +1437,17 @@ main:not(.home) {
   font-family: "Manrope", sans-serif;
   color: var(--black);
   font-size: 16px;
+   color: #f2e7e3;
+   font-weight: bold;
 }
 
 .benefit-card p {
   color: var(--muted);
+   color: #f2e7e3;
   font-size: 12px;
   margin-top: 9px;
   line-height: 1.7;
+     font-weight: bold;
 }
 
 /* ==========================================
