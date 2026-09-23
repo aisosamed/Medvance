@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
      MEDVANCE CART
   ====================================================== */
 
-  const WHATSAPP_NUMBER = "2349169826418";
+  const WHATSAPP_NUMBER = "2347047658107";
 
   const STORAGE_KEY = "medvance_cart";
 
