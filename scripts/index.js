@@ -134,6 +134,65 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =====================================================
+     REVIEW CAROUSEL
+  ====================================================== */
+
+  const reviewCards = Array.from(document.querySelectorAll(".review-slider .review-card"));
+  const reviewDots = Array.from(document.querySelectorAll(".review-dot"));
+  const reviewArrows = Array.from(document.querySelectorAll(".review-arrow"));
+
+  let activeReviewIndex = 0;
+  let reviewInterval = null;
+
+  function renderReview(index) {
+    if (!reviewCards.length) {
+      return;
+    }
+
+    activeReviewIndex = (index + reviewCards.length) % reviewCards.length;
+
+    reviewCards.forEach((card, cardIndex) => {
+      const isActive = cardIndex === activeReviewIndex;
+      card.classList.toggle("active", isActive);
+      card.setAttribute("aria-hidden", String(!isActive));
+    });
+
+    reviewDots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === activeReviewIndex;
+      dot.classList.toggle("active", isActive);
+      dot.setAttribute("aria-selected", String(isActive));
+    });
+  }
+
+  function startReviewCycle() {
+    if (reviewInterval) {
+      clearInterval(reviewInterval);
+    }
+
+    reviewInterval = setInterval(() => {
+      renderReview(activeReviewIndex + 1);
+    }, 5000);
+  }
+
+  reviewArrows.forEach((button) => {
+    button.addEventListener("click", () => {
+      const direction = button.dataset.direction === "next" ? 1 : -1;
+      renderReview(activeReviewIndex + direction);
+      startReviewCycle();
+    });
+  });
+
+  reviewDots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      renderReview(Number(dot.dataset.index));
+      startReviewCycle();
+    });
+  });
+
+  renderReview(0);
+  startReviewCycle();
+
+  /* =====================================================
      MEDVANCE CART
   ====================================================== */
 
