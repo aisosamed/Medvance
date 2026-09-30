@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book a Doctor-Led Weight Management Consultation | MedVanceNg</title>
+<meta name="description" content="Private video consultations with licensed doctors, anywhere in Nigeria. Get a personalised weight management plan. Plans from ₦200,000/month.">
+<link rel="canonical" href="https://www.medvanceng.com/consultation.html">
+<meta property="og:title" content="Doctor-led weight care, from your phone | MedVanceNg">
+<meta property="og:description" content="Private video consultations with licensed doctors, anywhere in Nigeria.">
+<meta property="og:url" content="https://www.medvanceng.com/consultation.html">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#C43080">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pink:#E1409B; --pink-dark:#C43080; --ink:#2A0F20; --ink-soft:#5B4150;
+  --ground:#FFF5FA; --surface:#FFFFFF; --line:#F3D3E4; --tint:#FBE0EE; --on-pink:#FFFFFF;
+  --wa:#1F8F4E;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#FBEAF3; --ink-soft:#D8B9CA; --ground:#1C0B15; --surface:#2A1320; --line:#4A2438; --tint:#3A1A2C; --pink-dark:#E1409B;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#FBEAF3; --ink-soft:#D8B9CA; --ground:#1C0B15; --surface:#2A1320; --line:#4A2438; --tint:#3A1A2C; --pink-dark:#E1409B;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:var(--pink-dark)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:Fraunces,Georgia,'Times New Roman',serif;font-weight:600;line-height:1.08;margin:0;letter-spacing:-.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--pink-dark);font-family:Fraunces,Georgia,serif;font-weight:700;font-size:24px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--pink);background:var(--surface);color:var(--pink-dark);font-weight:700;font-size:14px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:18px;text-decoration:none;border:0;cursor:pointer}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 24px rgba(31,143,78,.28)}
+.btn-wa:hover{background:#18763F}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.btn-ghost:hover{border-color:var(--pink)}
+
+/* hero */
+.hero{display:grid;gap:36px;padding:28px 0 56px;align-items:center}
+.hero h1{font-size:clamp(40px,8vw,68px)}
+.hero p.lead{font-size:clamp(18px,2.4vw,21px);color:var(--ink-soft);max-width:34ch;margin:18px 0 26px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;padding:0;list-style:none;font-size:15px;color:var(--ink-soft)}
+.trust li{display:flex;align-items:center;gap:8px}
+
+/* the appointment slip: the page's one bold element */
+.slip{position:relative;background:var(--pink-dark);color:var(--on-pink);border-radius:28px;padding:30px 28px 26px;overflow:hidden}
+.slip::before{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:var(--pink);opacity:.55}
+.slip > *{position:relative}
+.slip .from{font-size:16px;opacity:.9}
+.slip .price{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(46px,9vw,60px);line-height:1;margin:6px 0 2px}
+.slip .per{font-size:17px;font-weight:700}
+.slip .tear{border:0;border-top:2px dashed rgba(255,255,255,.45);margin:22px -28px 20px}
+.slip ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.slip li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.45}
+.slip li svg{flex-shrink:0;margin-top:2px}
+
+/* sections */
+section{padding:56px 0}
+.sec-head{max-width:30ch;margin-bottom:28px}
+.sec-head h2{font-size:clamp(30px,5vw,42px)}
+.sec-head p{color:var(--ink-soft);margin:10px 0 0}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.steps li::before{content:counter(s);width:52px;height:52px;border-radius:50%;background:var(--tint);color:var(--pink-dark);font-family:Fraunces,Georgia,serif;font-weight:700;font-size:24px;display:flex;align-items:center;justify-content:center}
+.steps h3{font-size:22px;margin-bottom:4px}
+.steps p{margin:0;color:var(--ink-soft)}
+
+.quotes{display:grid;gap:16px}
+.quote{margin:0;background:var(--surface);border-radius:22px;padding:26px;border:1px solid var(--line)}
+.quote blockquote{margin:0;font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1.4;font-weight:500}
+.quote figcaption{margin-top:16px;display:flex;align-items:center;gap:12px;font-weight:700;color:var(--ink-soft);font-size:15px}
+.initial{width:40px;height:40px;border-radius:50%;background:var(--tint);color:var(--pink-dark);display:flex;align-items:center;justify-content:center;font-weight:700}
+
+.faq{display:grid;gap:10px;max-width:760px}
+.faq details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;font-weight:700;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;color:var(--pink-dark);font-weight:500;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 18px;color:var(--ink-soft)}
+
+.closer{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:36px 26px;text-align:left}
+.closer h2{font-size:clamp(30px,5vw,44px);max-width:18ch}
+.closer p{color:var(--ink-soft);margin:12px 0 24px;max-width:46ch}
+
+footer{padding:36px 0 120px;font-size:14px;color:var(--ink-soft)}
+footer .row{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:14px}
+footer p{margin:6px 0;max-width:70ch}
+
+/* sticky mobile bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--ground);border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;z-index:10}
+.sticky .p{font-size:14px;line-height:1.25;color:var(--ink-soft)}
+.sticky .p strong{display:block;font-size:17px;color:var(--ink)}
+.sticky .btn{flex:1;min-height:52px;font-size:17px;padding:0 16px}
+
+@media (min-width:860px){
+  body{font-size:18px}
+  .hero{grid-template-columns:1.25fr 1fr;gap:56px;padding:48px 0 80px}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .steps li{grid-template-columns:1fr;padding:26px}
+  .quotes{grid-template-columns:1fr 1fr}
+  .closer{padding:52px}
+  .sticky{display:none}
+  footer{padding-bottom:48px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="https://www.medvanceng.com/" aria-label="MedVanceNg home">
+      <svg width="36" height="36" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="13" fill="#E1409B"/><path d="M24 13v22M13 24h22" stroke="#fff" stroke-width="4.5" stroke-linecap="round"/></svg>
+      MedVanceNg
+    </a>
+    <span class="badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+      Licensed telehealth
+    </span>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Doctor-led weight care, from your phone.</h1>
+        <p class="lead">Private video consultations with licensed doctors, anywhere in Nigeria. Leave with a plan built around your health history.</p>
+        <div class="cta-row">
+          <a class="btn btn-wa" href="https://wa.me/2347047658107?text=Hi%20MedVanceNg%2C%20I%27d%20like%20to%20book%20a%20weight%20management%20consultation." target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>
+            Book on WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#how">How it works</a>
+        </div>
+        <ul class="trust">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C43080" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Licensed doctors</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C43080" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Private video calls</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C43080" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Serving all of Nigeria</li>
+        </ul>
+      </div>
+
+      <aside class="slip" aria-label="Pricing">
+        <div class="from">Plans from</div>
+        <div class="price">₦200,000</div>
+        <div class="per">per month</div>
+        <hr class="tear">
+        <ul>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>One-on-one video consultation with a licensed doctor</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>A personalised plan based on your health history</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Regular follow-ups with your care team</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Support on WhatsApp between visits</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section id="how">
+      <div class="sec-head">
+        <h2>How it works</h2>
+        <p>Three steps, all from your phone.</p>
+      </div>
+      <ol class="steps">
+        <li><div><h3>Message us on WhatsApp</h3><p>Tell our team a good time and we'll book your consultation.</p></div></li>
+        <li><div><h3>Meet your doctor</h3><p>A private video call to talk through your health history and goals.</p></div></li>
+        <li><div><h3>Start your plan</h3><p>Get a personalised plan and ongoing check-ins with your care team.</p></div></li>
+      </ol>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <h2>Real people, real results</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote>“I feel healthier and more confident. My doctor made the whole process easy.”</blockquote>
+          <figcaption><span class="initial" aria-hidden="true">A</span>Mrs A, Lekki</figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“Two months with MedVanceNg and they’re the best team there is. I even got a complimentary diet plan.”</blockquote>
+          <figcaption><span class="initial" aria-hidden="true">T</span>Mr T, Abuja</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <h2>Questions</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Who will I speak with?</summary><p>A licensed doctor on the MedVanceNg team, by private one-on-one video call.</p></details>
+        <details><summary>Is my consultation private?</summary><p>Yes. Your call is one-on-one, and your health information is kept confidential.</p></details>
+        <details><summary>Where do you serve?</summary><p>Anywhere in Nigeria. All you need is a phone with an internet connection.</p></details>
+        <details><summary>How much does it cost?</summary><p>Plans start from ₦200,000 per month. Your doctor will explain exactly what your plan includes during your consultation.</p></details>
+        <details><summary>How do I book?</summary><p>Tap "Book on WhatsApp" and send us a message. Our team will reply and schedule your consultation.</p></details>
+      </div>
+    </section>
+
+    <section>
+      <div class="closer">
+        <h2>Ready to talk to a doctor?</h2>
+        <p>Send us a message on WhatsApp and we'll book your private consultation.</p>
+        <a class="btn btn-wa" href="https://wa.me/2347047658107?text=Hi%20MedVanceNg%2C%20I%27d%20like%20to%20book%20a%20weight%20management%20consultation." target="_blank" rel="noopener">Book on WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="row">
+      <a href="https://www.medvanceng.com/">MedVanceNg home</a>
+      <a href="[PRIVACY POLICY URL]">Privacy policy</a>
+      <a href="[TERMS URL]">Terms</a>
+    </div>
+    <p>Treatment options are decided by a licensed clinician after consultation. Individual results vary. Testimonials reflect individual experiences.</p>
+    <p>NAFDAC registration: [insert registration number]</p>
+    <p>© 2026 MedVanceNg</p>
+  </footer>
+</div>
+
+<div class="sticky">
+  <div class="p">From<strong>₦200,000/mo</strong></div>
+  <a class="btn btn-wa" href="https://wa.me/2347047658107?text=Hi%20MedVanceNg%2C%20I%27d%20like%20to%20book%20a%20weight%20management%20consultation." target="_blank" rel="noopener">Book on WhatsApp</a>
+</div>
+</body>
+</html>
