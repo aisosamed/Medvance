@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Book a Doctor-Led Weight Management Consultation | MedVanceNg</title>
+<title>Book a Doctor Led Weight Management Consultation | MedVanceNg</title>
 <meta name="description" content="Private video consultations with licensed doctors, anywhere in Nigeria. Get a personalised weight management plan. Plans from ₦200,000/month.">
 <link rel="canonical" href="https://www.medvanceng.com/consultation.html">
-<meta property="og:title" content="Doctor-led weight care, from your phone | MedVanceNg">
+<meta property="og:title" content="Doctor led weight care, from your phone | MedVanceNg">
 <meta property="og:description" content="Private video consultations with licensed doctors, anywhere in Nigeria.">
 <meta property="og:url" content="https://www.medvanceng.com/consultation.html">
 <meta property="og:type" content="website">
@@ -16,9 +16,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --pink:#E1409B; --pink-dark:#C43080; --ink:#2A0F20; --ink-soft:#5B4150;
-  --ground:#FFF5FA; --surface:#FFFFFF; --line:#F3D3E4; --tint:#FBE0EE; --on-pink:#FFFFFF;
-  --wa:#1F8F4E;
+  --primary: #e1409b;
+  --primary-dark: #e1409b;
+  --primary-light: #ffeaf5;
+  --brown: #a98b7b;
+  --brown-dark: #80685c;
+  --brown-light: #f6eee9;
+  --ink: #2f2428;
+  --ink-soft: #5d4d52;
+  --ground: #fffafc;
+  --surface: #ffffff;
+  --line: #f0dee6;
+  --tint: #fdf1f7;
+  --on-pink: #ffffff;
+  --wa: #1f8f4e;
+  --container: 1080px;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
@@ -42,15 +54,16 @@ h1,h2,h3{font-family:Fraunces,Georgia,'Times New Roman',serif;font-weight:600;li
 
 /* header */
 .top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--pink-dark);font-family:Fraunces,Georgia,serif;font-weight:700;font-size:24px}
-.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--pink);background:var(--surface);color:var(--pink-dark);font-weight:700;font-size:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--primary-dark);font-family:Fraunces,Georgia,serif;font-weight:700;font-size:24px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--primary);background:var(--surface);color:var(--primary-dark);font-weight:700;font-size:14px;box-shadow:0 10px 24px rgba(225,64,155,0.08)}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:18px;text-decoration:none;border:0;cursor:pointer}
-.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 24px rgba(31,143,78,.28)}
-.btn-wa:hover{background:#18763F}
-.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
-.btn-ghost:hover{border-color:var(--pink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:18px;text-decoration:none;border:0;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-wa{background:linear-gradient(135deg, var(--wa), #18763f);color:#fff;box-shadow:0 14px 28px rgba(31,143,78,.22)}
+.btn-wa:hover{background:linear-gradient(135deg, #18763f, var(--wa))}
+.btn-ghost{background:var(--surface);color:var(--ink);border:2px solid var(--line)}
+.btn-ghost:hover{border-color:var(--primary);box-shadow:0 10px 24px rgba(225,64,155,0.08)}
 
 /* hero */
 .hero{display:grid;gap:36px;padding:28px 0 56px;align-items:center}
@@ -61,8 +74,8 @@ h1,h2,h3{font-family:Fraunces,Georgia,'Times New Roman',serif;font-weight:600;li
 .trust li{display:flex;align-items:center;gap:8px}
 
 /* the appointment slip: the page's one bold element */
-.slip{position:relative;background:var(--pink-dark);color:var(--on-pink);border-radius:28px;padding:30px 28px 26px;overflow:hidden}
-.slip::before{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:var(--pink);opacity:.55}
+.slip{position:relative;background:linear-gradient(135deg, #f8d9e8, #f5c2db);color:var(--ink);border-radius:28px;padding:30px 28px 26px;overflow:hidden;box-shadow:0 22px 50px rgba(225,64,155,.10);border:1px solid rgba(225,64,155,.12)}
+.slip::before{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,0.35)}
 .slip > *{position:relative}
 .slip .from{font-size:16px;opacity:.9}
 .slip .price{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(46px,9vw,60px);line-height:1;margin:6px 0 2px}
@@ -98,7 +111,7 @@ section{padding:56px 0}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{margin:0 0 18px;color:var(--ink-soft)}
 
-.closer{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:36px 26px;text-align:left}
+.closer{background:linear-gradient(180deg, #fff7fb, #ffffff);border:1px solid var(--line);border-radius:28px;padding:36px 26px;text-align:left;box-shadow:0 18px 40px rgba(225,64,155,0.06)}
 .closer h2{font-size:clamp(30px,5vw,44px);max-width:18ch}
 .closer p{color:var(--ink-soft);margin:12px 0 24px;max-width:46ch}
 
@@ -107,7 +120,7 @@ footer .row{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:14px}
 footer p{margin:6px 0;max-width:70ch}
 
 /* sticky mobile bar */
-.sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:var(--ground);border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;z-index:10}
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(255,250,252,0.95);border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;z-index:10;backdrop-filter:blur(8px)}
 .sticky .p{font-size:14px;line-height:1.25;color:var(--ink-soft)}
 .sticky .p strong{display:block;font-size:17px;color:var(--ink)}
 .sticky .btn{flex:1;min-height:52px;font-size:17px;padding:0 16px}
@@ -141,7 +154,7 @@ footer p{margin:6px 0;max-width:70ch}
   <main>
     <div class="hero">
       <div>
-        <h1>Doctor-led weight care, from your phone.</h1>
+        <h1>Doctor led weight care, from your phone.</h1>
         <p class="lead">Private video consultations with licensed doctors, anywhere in Nigeria. Leave with a plan built around your health history.</p>
         <div class="cta-row">
           <a class="btn btn-wa" href="https://wa.me/2347047658107?text=Hi%20MedVanceNg%2C%20I%27d%20like%20to%20book%20a%20weight%20management%20consultation." target="_blank" rel="noopener">
@@ -228,7 +241,7 @@ footer p{margin:6px 0;max-width:70ch}
       <a href="[TERMS URL]">Terms</a>
     </div>
     <p>Treatment options are decided by a licensed clinician after consultation. Individual results vary. Testimonials reflect individual experiences.</p>
-    <p>NAFDAC registration: [insert registration number]</p>
+    <p>NAFDAC </p>
     <p>© 2026 MedVanceNg</p>
   </footer>
 </div>
