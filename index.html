@@ -31,7 +31,10 @@
   <meta name="twitter:title" content="Mounjaro, Ozempic & Tirzepatide in Nigeria | MedVanceNg" />
   <meta name="twitter:description"
     content="Genuine GLP-1 medicines dispensed by a NAFDAC registered pharmacy, reviewed by a licensed prescriber before every order." />
-
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+>
 
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="192192" href="/assets/android-chrome-192x192.png">
@@ -44,8 +47,9 @@
 
   <link rel="stylesheet" href="./styles/styles.css" />
   <link rel="stylesheet" href="./styles/cart.css" />
-
+  <link rel="stylesheet" href="./styles/dropdown.css" />
   <script src="./scripts/index.js" defer></script>
+  <script src="./scripts/dropdown.js" defer></script>
 
   <script type="application/ld+json">
     {
@@ -147,16 +151,38 @@
           <small>Your trusted partner in health; accessible healthcare.</small>
         </span>
       </a>
-
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/#glp1">GLP-1 and Tirzepatide</a>
         <a href="/shop.html">Shop</a>
         <a href="/#categories">Categories</a>
         <a href="/about.html">About Us</a>
-        <a href="/blogs/glp1-weight-loss-nigeria.html">Blog</a>
+
+        <div class="blog-dropdown">
+  <button class="blog-dropdown-toggle" type="button" aria-expanded="false">
+    Blog
+    <i class="fa fa-caret-down blog-arrow" aria-hidden="true"></i>
+  </button>
+
+  <div class="blog-dropdown-menu">
+    <a href="/blogs/glp1-weight-loss-nigeria.html">
+      GLP-1 Weight Loss in Nigeria
+    </a>
+
+    <a href="/blogs/your-second-post.html">
+      Your Second Blog Post
+    </a>
+
+    <a href="/blogs/your-third-post.html">
+      Your Third Blog Post
+    </a>
+  </div>
+</div>
+
         <a href="/#contact">Contact</a>
+
       </nav>
+
 
       <div class="nav-actions">
         <button class="icon-button" id="searchToggle" type="button" aria-label="Open search">
@@ -201,8 +227,33 @@
       <a href="/shop.html">Shop</a>
       <a href="/#categories">Categories</a>
       <a href="/about.html">About Us</a>
-      <a href="/blogs/glp1-weight-loss-nigeria.html">Blog</a>
-      <a href="/#contact">Contact</a>
+    <div class="mobile-blog-dropdown">
+  <button
+    class="mobile-blog-dropdown-toggle"
+    type="button"
+    aria-expanded="false"
+  >
+    Blog
+    <i class="fa fa-caret-down mobile-blog-arrow" aria-hidden="true"></i>
+  </button>
+
+  <div class="mobile-blog-dropdown-menu">
+    <a href="/blogs/glp1-weight-loss-nigeria.html">
+      GLP-1 Weight Loss in Nigeria
+    </a>
+
+    <a href="/blogs/your-second-post.html">
+      Your Second Blog Post
+    </a>
+
+    <a href="/blogs/your-third-post.html">
+      Your Third Blog Post
+    </a>
+  </div>
+</div>
+
+      </div><a href="/#contact">Contact</a>
+
     </nav>
   </header>
 
@@ -354,7 +405,158 @@
       </div>
     </section>
 
-     
+    <section class="review-flow section" aria-labelledby="review-flow-title">
+      <div class="container">
+        <div class="review-header-row">
+          <div class="section-heading left-align">
+            <span class="section-label"> CUSTOMER REVIEWS </span>
+            <h2 id="review-flow-title">Trusted by patients who want a fast, safe path to care.</h2>
+          </div>
+          <div class="review-badge">
+            <span class="pulse-dot">✓</span>
+            5-second start
+          </div>
+        </div>
+
+        <div class="review-layout">
+          <div class="flow-panel">
+            <div class="flow-steps">
+              <article class="flow-step">
+                <span class="flow-number">01</span>
+                <div class="flow-copy">
+                  <h3>Select your product</h3>
+                  <p>Choose Mounjaro, Ozempic, or compounded tirzepatide based on your care plan.</p>
+                </div>
+              </article>
+
+              <article class="flow-step">
+                <span class="flow-number">02</span>
+                <div class="flow-copy">
+                  <h3>Send a quick WhatsApp</h3>
+                  <p>Tell us your goal and we guide you through the process with zero confusion.</p>
+                </div>
+              </article>
+
+              <article class="flow-step">
+                <span class="flow-number">03</span>
+                <div class="flow-copy">
+                  <h3>Prescriber review</h3>
+                  <p>A licensed professional checks suitability before your order is confirmed.</p>
+                </div>
+              </article>
+
+              <article class="flow-step">
+                <span class="flow-number">04</span>
+                <div class="flow-copy">
+                  <h3>Approve &amp; pay</h3>
+                  <p>We confirm the right strength and send you a clear, secure next step.</p>
+                </div>
+              </article>
+
+              <article class="flow-step">
+                <span class="flow-number">05</span>
+                <div class="flow-copy">
+                  <h3>Receive fast delivery</h3>
+                  <p>Enjoy discreet shipping across Nigeria with clear follow-up support.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="review-panel">
+            <div class="review-slider" aria-live="polite">
+              <article class="review-card active">
+                <div class="review-header">
+                  <div class="avatar">AA</div>
+                  <div class="review-meta">
+                    <strong>Amaka A.</strong>
+                    <span>Lagos</span>
+                  </div>
+                </div>
+                <p>
+                  “I wanted a trusted place for Mounjaro and the process felt easy, professional,
+                  and fast. I got answers quickly and my order was handled with care.”
+                </p>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </article>
+
+              <article class="review-card secondary-review">
+                <div class="review-header">
+                  <div class="avatar alt">TO</div>
+                  <div class="review-meta">
+                    <strong>Tosin O.</strong>
+                    <span>Abuja</span>
+                  </div>
+                </div>
+                <p>
+                  “I lost 9kg in 1 month with the guidance from the team. The process was clear,
+                  professional, and the medication arrived exactly as expected.”
+                </p>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </article>
+
+              <article class="review-card secondary-review">
+                <div class="review-header">
+                  <div class="avatar alt">CH</div>
+                  <div class="review-meta">
+                    <strong>Chinelo H.</strong>
+                    <span>Port Harcourt</span>
+                  </div>
+                </div>
+                <p>
+                  “I’m down 15kg in 2 months and I’m so happy with the support. The team was helpful,
+                  the consultation was easy, and the delivery was quick and discreet.”
+                </p>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </article>
+
+              <article class="review-card secondary-review">
+                <div class="review-header">
+                  <div class="avatar alt">DA</div>
+                  <div class="review-meta">
+                    <strong>David A.</strong>
+                    <span>Ibadan</span>
+                  </div>
+                </div>
+                <p>
+                  “This felt more trustworthy than other places I checked. The prescriber review was
+                  thorough, and delivery was discreet and timely.”
+                </p>
+                <div class="stars" aria-label="5 stars">★★★★★</div>
+              </article>
+            </div>
+
+            <div class="review-controls" aria-label="Review navigation">
+              <button class="review-arrow" type="button" data-direction="prev" aria-label="Previous review">
+                ←
+              </button>
+
+              <div class="review-dots" aria-label="Review pagination">
+                <button class="review-dot active" type="button" data-index="0" aria-label="View review 1"></button>
+                <button class="review-dot" type="button" data-index="1" aria-label="View review 2"></button>
+                <button class="review-dot" type="button" data-index="2" aria-label="View review 3"></button>
+                <button class="review-dot" type="button" data-index="3" aria-label="View review 4"></button>
+              </div>
+
+              <button class="review-arrow" type="button" data-direction="next" aria-label="Next review">
+                →
+              </button>
+            </div>
+
+            <div class="mini-stats">
+              <div class="mini-stat">
+                <strong>4.9/5</strong>
+                <span>Average rating</span>
+              </div>
+              <div class="mini-stat">
+                <strong>2 min</strong>
+                <span>Typical response time</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- CATEGORIES -->
     <section class="categories-section section" id="categories">
@@ -795,151 +997,6 @@
       </div>
     </section>
 
-
-    <section class="review-flow section" aria-labelledby="review-flow-title">
-      <div class="container">
-        <div class="review-header-row">
-          <div class="section-heading left-align">
-            <span class="section-label"> CUSTOMER REVIEWS </span>
-            <h2 id="review-flow-title">Trusted by patients who want a fast, safe path to care.</h2>
-          </div>
-          <div class="review-badge">
-            <span class="pulse-dot">✓</span>
-            5-second start
-          </div>
-        </div>
-
-        <div class="review-layout">
-          <div class="flow-panel">
-            <div class="flow-steps">
-              <article class="flow-step">
-                <span class="flow-number">01</span>
-                <div class="flow-copy">
-                  <h3>Select your product</h3>
-                  <p>Choose Mounjaro, Ozempic, or compounded tirzepatide based on your care plan.</p>
-                </div>
-              </article>
-
-              <article class="flow-step">
-                <span class="flow-number">02</span>
-                <div class="flow-copy">
-                  <h3>Send a quick WhatsApp</h3>
-                  <p>Tell us your goal and we guide you through the process with zero confusion.</p>
-                </div>
-              </article>
-
-              <article class="flow-step">
-                <span class="flow-number">03</span>
-                <div class="flow-copy">
-                  <h3>Prescriber review</h3>
-                  <p>A licensed professional checks suitability before your order is confirmed.</p>
-                </div>
-              </article>
-
-              <article class="flow-step">
-                <span class="flow-number">04</span>
-                <div class="flow-copy">
-                  <h3>Approve &amp; pay</h3>
-                  <p>We confirm the right strength and send you a clear, secure next step.</p>
-                </div>
-              </article>
-
-              <article class="flow-step">
-                <span class="flow-number">05</span>
-                <div class="flow-copy">
-                  <h3>Receive fast delivery</h3>
-                  <p>Enjoy discreet shipping across Nigeria with clear follow-up support.</p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="review-panel">
-            <div class="review-slider" aria-live="polite">
-              <article class="review-card active">
-                <div class="review-header">
-                  <div class="avatar">AA</div>
-                  <div class="review-meta">
-                    <strong>Amaka A.</strong>
-                    <span>Lagos</span>
-                  </div>
-                </div>
-                <p>
-                  “I wanted a trusted place for Mounjaro and the process felt easy, professional,
-                  and fast. I got answers quickly and my order was handled with care.”
-                </p>
-                <div class="stars" aria-label="5 stars">★★★★★</div>
-              </article>
-
-              <article class="review-card secondary-review">
-                <div class="review-header">
-                  <div class="avatar alt">TO</div>
-                  <div class="review-meta">
-                    <strong>Tosin O.</strong>
-                    <span>Abuja</span>
-                  </div>
-                </div>
-                <p>
-                  “I lost 9kg in 1 month with the guidance from the team. The process was clear,
-                  professional, and the medication arrived exactly as expected.”
-                </p>
-                <div class="stars" aria-label="5 stars">★★★★★</div>
-              </article>
-
-              <article class="review-card secondary-review">
-                <div class="review-header">
-                  <div class="avatar alt">CH</div>
-                  <div class="review-meta">
-                    <strong>Chinelo H.</strong>
-                    <span>Port Harcourt</span>
-                  </div>
-                </div>
-                <p>
-                  “I’m down 15kg in 2 months and I’m so happy with the support. The team was helpful,
-                  the consultation was easy, and the delivery was quick and discreet.”
-                </p>
-                <div class="stars" aria-label="5 stars">★★★★★</div>
-              </article>
-
-              <article class="review-card secondary-review">
-                <div class="review-header">
-                  <div class="avatar alt">DA</div>
-                  <div class="review-meta">
-                    <strong>David A.</strong>
-                    <span>Ibadan</span>
-                  </div>
-                </div>
-                <p>
-                  “This felt more trustworthy than other places I checked. The prescriber review was
-                  thorough, and delivery was discreet and timely.”
-                </p>
-                <div class="stars" aria-label="5 stars">★★★★★</div>
-              </article>
-            </div>
-
-            <div class="review-controls" aria-label="Review navigation">
-              <button class="review-arrow" type="button" data-direction="prev" aria-label="Previous review">
-                ←
-              </button>
-
-              <div class="review-dots" aria-label="Review pagination">
-                <button class="review-dot active" type="button" data-index="0" aria-label="View review 1"></button>
-                <button class="review-dot" type="button" data-index="1" aria-label="View review 2"></button>
-                <button class="review-dot" type="button" data-index="2" aria-label="View review 3"></button>
-                <button class="review-dot" type="button" data-index="3" aria-label="View review 4"></button>
-              </div>
-
-              <button class="review-arrow" type="button" data-direction="next" aria-label="Next review">
-                →
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
     <!-- FAQ -->
     <section class="faq-section section" id="faq">
       <div class="container">
@@ -1063,7 +1120,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="/" class="logo footer-logo">
-             <img src="assets/favicon-32x32.png" alt="MedVanceNg logo" />
+          <img src="assets/favicon-32x32.png" alt="MedVanceNg logo" />
           <span>
             <strong>MedVanceNg</strong>
             <small> Your trusted partner in health. Enhancing lives. </small>

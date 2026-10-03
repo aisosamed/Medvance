@@ -1,0 +1,107 @@
+.mobile-blog-dropdown {
+    width: 100%;
+}
+
+.mobile-blog-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0;
+    order-bottom: 1px solid #ccc ;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.mobile-blog-arrow {
+    transition: transform 0.2s ease;
+}
+
+.mobile-blog-dropdown.open .mobile-blog-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-blog-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+        max-height 0.25s ease,
+        opacity 0.2s ease;
+}
+
+.mobile-blog-dropdown.open .mobile-blog-dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.mobile-blog-dropdown-menu a {
+    display: block;
+    padding: 10px 0 10px 20px;
+    font-size: 14px;
+}
+
+
+
+.blog-dropdown {
+    position: relative;
+}
+
+.blog-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+.blog-arrow {
+    transition: transform 0.2s ease;
+}
+
+.blog-dropdown.open .blog-arrow {
+    transform: rotate(180deg);
+}
+
+.blog-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 0;
+    min-width: 240px;
+    padding: 8px 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+.blog-dropdown.open .blog-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.blog-dropdown-menu a {
+    display: block;
+    padding: 11px 16px;
+    color: #333333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.blog-dropdown-menu a:hover {
+    background: #f5f5f5;
+}
