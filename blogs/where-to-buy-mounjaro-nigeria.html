@@ -197,6 +197,64 @@ footer strong{color:var(--brand-dark)}
 .duo h3{margin:0 0 .5rem}
 .duo ul{margin:0 0 1rem;font-size:1rem}
 .duo .btn{font-size:.95rem;padding:.85rem 1.2rem}
+
+  .card-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 24px 16px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        /* Card container responsiveness: min-width 720px side-by-side in center with max-width 900px */
+        @media (min-width: 720px) {
+            .card-container {
+                max-width: 900px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+                padding: 36px 24px;
+            }
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 24px;
+            border: 1px solid #e8ecef;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .image-wrapper {
+            width: 100%;
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .image-wrapper img {
+            transform: scale(1.03);
+        }
 </style>
 
 </head>
@@ -227,6 +285,37 @@ footer strong{color:var(--brand-dark)}
 
 <h2>Mounjaro and tirzepatide: what's the difference?</h2>
 <p><strong>Tirzepatide</strong> is the medicine. <strong>Mounjaro</strong> is Eli Lilly's brand name for it, sold in pre-filled pens from 2.5 mg to 15 mg. You may also see <a href="/blogs/compounded-tirzepatide-nigeria.html">compounded tirzepatide</a>, which comes in vials and is made by pharmacies rather than Eli Lilly.</p>
+
+<main style="flex-grow: 1; display: flex; justify-content: center; align-items: flex-start; width: 100%;">
+        <div class="card-container">
+
+            <!-- Product Card 1: Mounjaro 12.5mg -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="assets/images/mounjaro-12.5mg.jpeg" alt="Mounjaro 12.5mg injection pen" onerror="this.onerror=null; this.src='https://placehold.co/600x450/e9ecef/212529?text=Mounjaro+12.5mg';" />
+                </div>
+                <div style="background-color: #ffffff; padding: 18px 12px; text-align: center; border-top: 1px solid #f0f0f0;">
+                    <h3 style="font-size: 15px; font-weight: 800; color: #000000; letter-spacing: 0.5px; text-transform: uppercase; margin: 0;">
+                        MOUNJARO 12.5MG
+                    </h3>
+                </div>
+            </div>
+
+            <!-- Product Card 2: Mounjaro 15mg -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="assets/images/mounjaro-15mg.jpeg" alt="Mounjaro 15mg injection pen" onerror="this.onerror=null; this.src='https://placehold.co/600x450/e9ecef/212529?text=Mounjaro+15mg';" />
+                </div>
+                <div style="background-color: #ffffff; padding: 18px 12px; text-align: center; border-top: 1px solid #f0f0f0;">
+                    <h3 style="font-size: 15px; font-weight: 800; color: #000000; letter-spacing: 0.5px; text-transform: uppercase; margin: 0;">
+                        MOUNJARO 15MG
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
 <p>Tirzepatide mimics two gut hormones, GIP and GLP-1. It reduces appetite, helps you feel full sooner and improves blood sugar control. In Eli Lilly's SURMOUNT-1 trial, adults on the highest dose lost <mark>about 21% of their body weight</mark> on average over 72 weeks, alongside diet and exercise.</p>
 
 <h2>Where to buy Mounjaro in Nigeria</h2>
