@@ -212,6 +212,25 @@ footer strong{color:var(--brand-dark)}
 .duo h3{margin:0 0 .5rem}
 .duo ul{margin:0 0 1rem;font-size:1rem}
 .duo .btn{font-size:.95rem;padding:.85rem 1.2rem}
+  .card-container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 24px 16px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+      
+        @media (min-width: 720px) {
+            .card-container {
+                max-width: 900px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+                padding: 36px 24px;
+            }
+        }
 </style>
 
 </head>
@@ -256,6 +275,52 @@ footer strong{color:var(--brand-dark)}
 </tbody>
 </table>
 </div>
+
+<main style="flex-grow: 1; display: flex; justify-content: center; align-items: flex-start; width: 100%;">
+        <div class="card-container">
+
+            <!-- Product Card 1: Mounjaro -->
+            <div style="background-color: #f7f8f9; border-radius: 24px; border: 1px solid #e8ecef; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <!-- Card Image Area -->
+                <div style="width: 100%; background-color: #f0f2f5; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                    <img 
+                        src="../assets/images/mounjaro-2.5mg.jpeg" 
+                        alt="Mounjaro 2.5mg injection pen" 
+                        style="width: 100%; height: auto; display: block; object-fit: cover;" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x450/e9ecef/212529?text=Mounjaro+2.5mg';"
+                    />
+                </div>
+                <!-- Card Footer Title Block -->
+                <div style="background-color: #ffffff; padding: 18px 12px; text-align: center; border-top: 1px solid #f0f0f0;">
+                    <h3 style="font-size: 15px; font-weight: 800; color: #000000; letter-spacing: 0.5px; text-transform: uppercase; margin: 0;">
+                        MOUNJARO
+                    </h3>
+                </div>
+            </div>
+
+            <!-- Product Card 2: Ozempic -->
+            <div style="background-color: #f7f8f9; border-radius: 24px; border: 1px solid #e8ecef; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                <!-- Card Image Area -->
+                <div style="width: 100%; background-color: #f0f2f5; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                    <img 
+                        src="../assets/images/ozempic-0.25mg.jpeg" 
+                        alt="Ozembic 0.25mg injection pen" 
+                        style="width: 100%; height: auto; display: block; object-fit: cover;" 
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x450/e9ecef/212529?text=Ozempic+0.25mg';"
+                    />
+                </div>
+                <!-- Card Footer Title Block -->
+                <div style="background-color: #ffffff; padding: 18px 12px; text-align: center; border-top: 1px solid #f0f0f0;">
+                    <h3 style="font-size: 15px; font-weight: 800; color: #000000; letter-spacing: 0.5px; text-transform: uppercase; margin: 0;">
+                        OZEMPIC
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
 <p class="note">*SURMOUNT-5 head-to-head trial, 72 weeks, highest tolerated doses, alongside diet and exercise. Individual results vary.</p>
 
 <h2>How they work</h2>
