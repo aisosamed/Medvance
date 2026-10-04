@@ -73,6 +73,14 @@
     <link rel="stylesheet" href="../styles/cart.css" />
     <link rel="stylesheet" href="../styles/blog.css" />
 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+>
+
+<link rel="stylesheet" href="./styles/dropdown.css" />
+<script src="./scripts/dropdown.js" defer></script>
+
     <script src="../scripts/index.js" defer></script>
 
     <script type="application/ld+json">
@@ -132,15 +140,39 @@
           </span>
         </a>
 
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="/#home">Home</a>
-          <a href="/#glp1">GLP-1 & Tirzepatide</a>
-          <a href="/shop.html">Shop</a>
-          <a href="/#categories">Categories</a>
-          <a href="/#about">About Us</a>
-          <a href="/blogs/glp1-weight-loss-nigeria.html">Blog</a>
-          <a href="/#contact">Contact</a>
-        </nav>
+       <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/#glp1">GLP-1 and Tirzepatide</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/#categories">Categories</a>
+        <a href="/about.html">About Us</a>
+
+        <div class="blog-dropdown">
+  <button class="blog-dropdown-toggle" type="button" aria-expanded="false">
+    Blog
+    <i class="fa fa-caret-down blog-arrow" aria-hidden="true"></i>
+  </button>
+
+  <div class="blog-dropdown-menu">
+    <a href="/blogs/glp1-weight-loss-nigeria.html">
+      GLP-1 Weight Loss in Nigeria
+    </a>
+
+    <a href="/blogs/mounjaro-vs-ozempic-nigeria.html">
+      Mounjaro-vs-ozempic in Nigeria
+    </a>
+
+    <a href="/blogs/where -to-buy-mounjaro-nigeria.html">
+      Where To Buy Munjaro in Nigeria
+    </a>
+<a href="/blogs/compounded-tirzepatide-nigeria.html">
+Compounded Tirzepatide in Nigeria </a>
+  </div>
+</div>
+
+        <a href="/#contact">Contact</a>
+
+      </nav>
 
         <div class="nav-actions">
           <a href="/shop.html" class="icon-button" aria-label="Shop">
@@ -162,15 +194,42 @@
         </div>
       </div>
 
-      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-        <a href="/#home">Home</a>
-        <a href="/#glp1">GLP-1 and Tirzepatide</a>
-        <a href="/shop.html">Shop</a>
-        <a href="/#categories">Categories</a>
-        <a href="/#about">About Us</a>
-        <a href="/blogs/glp1-weight-loss-nigeria.html">Blog</a>
-        <a href="/#contact">Contact</a>
-      </nav>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="/">Home</a>
+      <a href="/#glp1">GLP-1 and Tirzepatide</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/#categories">Categories</a>
+      <a href="/about.html">About Us</a>
+    <div class="mobile-blog-dropdown">
+  <button
+    class="mobile-blog-dropdown-toggle"
+    type="button"
+    aria-expanded="false"
+  >
+    Blog
+    <i class="fa fa-caret-down mobile-blog-arrow" aria-hidden="true"></i>
+  </button>
+
+  <div class="mobile-blog-dropdown-menu">
+        <a href="/blogs/glp1-weight-loss-nigeria.html">
+      GLP-1 Weight Loss in Nigeria
+    </a>
+
+    <a href="/blogs/mounjaro-vs-ozempic-nigeria.html">
+      Mounjaro-vs-ozempic in Nigeria
+    </a>
+
+    <a href="/blogs/where-to-buy-mounjaro-nigeria.html">
+      Where To Buy Munjaro in Nigeria
+    </a>
+<a href="/blogs/compounded-tirzepatide-nigeria.html">
+Compounded Tirzepatide in Nigeria </a>
+  </div>
+</div>
+
+      </div><a href="/#contact">Contact</a>
+
+    </nav>
     </header>
 
     <main class="main-content">
