@@ -197,6 +197,73 @@ footer strong{color:var(--brand-dark)}
 .duo h3{margin:0 0 .5rem}
 .duo ul{margin:0 0 1rem;font-size:1rem}
 .duo .btn{font-size:.95rem;padding:.85rem 1.2rem}
+
+  .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px 16px;
+        }
+
+        /* Card Grid: Stacked single column layout by default */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            width: 100%;
+        }
+
+        /* Responsive grid on screens min-width 720px: 2 equal columns and gap 24px */
+        @media (min-width: 720px) {
+            .container {
+                padding: 36px 24px;
+            }
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+        }
+
+        /* Product Card with rounded corners (20px) and subtle border/shadow */
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Image section filling top of card with light background */
+        .card-image-container {
+            width: 100%;
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .card-image-container img {
+            transform: scale(1.02);
+        }
+
 </style>
 
 </head>
@@ -227,6 +294,34 @@ footer strong{color:var(--brand-dark)}
 
 <h2>What is compounded tirzepatide?</h2>
 <p>Tirzepatide is the medicine inside Mounjaro and Zepbound. <strong>Compounded tirzepatide</strong> is the same active ingredient prepared by a compounding pharmacy or lab instead of Eli Lilly. It usually comes as a liquid in a multi-dose vial, sometimes combined with additives such as vitamin B12.</p>
+
+ <main style="flex-grow: 1; display: flex; justify-content: center; width: 100%;">
+        <div class="container">
+            <div class="product-grid">
+
+                <!-- Product Card 1: MVPEP 5MG -->
+                <div class="product-card">
+                    <div class="card-image-container">
+                        <img src="../assets/images/mvpep-5mg.png" alt="Mvpep 5mg injection pen" onerror="this.onerror=null; this.src='https://placehold.co/600x450/f1f5f9/0f172a?text=MVPEP+5MG';" />
+                    </div>
+                    <div class="card-label">
+                        <h3 class="card-title">MVPEP 5MG</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: RETATRUTIDE 10MG -->
+                <div class="product-card">
+                    <div class="card-image-container">
+                        <img src="../assets/images/retatrutide-10mg.png" alt="Retatrutide 10mg injection pen" onerror="this.onerror=null; this.src='https://placehold.co/600x450/f1f5f9/0f172a?text=RETATRUTIDE+10MG';" />
+                    </div>
+                    <div class="card-label">
+                        <h3 class="card-title">RETATRUTIDE 10MG</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
 <p>Like Mounjaro, it mimics two gut hormones, GIP and GLP-1. That <mark>reduces appetite, helps you feel full sooner</mark> and improves blood sugar control.</p>
 
 <h2>Compounded tirzepatide vs Mounjaro</h2>
