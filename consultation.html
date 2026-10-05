@@ -17,8 +17,8 @@
 <style>
 :root{
   --primary: #e1409b;
-  --primary-dark: #e1409b;
-  --primary-light: #ffeaf5;
+  --primary-dark: #c43080;
+  --primary-light: #fce6f2;
   --brown: #a98b7b;
   --brown-dark: #80685c;
   --brown-light: #f6eee9;
@@ -29,7 +29,7 @@
   --line: #f0dee6;
   --tint: #fdf1f7;
   --on-pink: #ffffff;
-  --wa: #1f8f4e;
+  --wa: #ffffff;
   --container: 1080px;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
@@ -60,8 +60,8 @@ h1,h2,h3{font-family:Fraunces,Georgia,'Times New Roman',serif;font-weight:600;li
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;font-weight:700;font-size:18px;text-decoration:none;border:0;cursor:pointer;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
 .btn:hover{transform:translateY(-1px)}
-.btn-wa{background:linear-gradient(135deg, var(--wa), #18763f);color:#fff;box-shadow:0 14px 28px rgba(31,143,78,.22)}
-.btn-wa:hover{background:linear-gradient(135deg, #18763f, var(--wa))}
+.btn-wa{background:#fff;color:var(--primary-dark);border:2px solid rgba(225,64,155,0.18);box-shadow:0 14px 28px rgba(225,64,155,.10)}
+.btn-wa:hover{background:#fff;box-shadow:0 14px 28px rgba(225,64,155,.14)}
 .btn-ghost{background:var(--surface);color:var(--ink);border:2px solid var(--line)}
 .btn-ghost:hover{border-color:var(--primary);box-shadow:0 10px 24px rgba(225,64,155,0.08)}
 
@@ -74,8 +74,8 @@ h1,h2,h3{font-family:Fraunces,Georgia,'Times New Roman',serif;font-weight:600;li
 .trust li{display:flex;align-items:center;gap:8px}
 
 /* the appointment slip: the page's one bold element */
-.slip{position:relative;background:linear-gradient(135deg, #f8d9e8, #f5c2db);color:var(--ink);border-radius:28px;padding:30px 28px 26px;overflow:hidden;box-shadow:0 22px 50px rgba(225,64,155,.10);border:1px solid rgba(225,64,155,.12)}
-.slip::before{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,0.35)}
+.slip{position:relative;background:linear-gradient(135deg, var(--primary-dark), var(--primary));color:var(--on-pink);border-radius:28px;padding:30px 28px 26px;overflow:hidden;box-shadow:0 22px 50px rgba(196,48,128,.18)}
+.slip::before{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,0.12)}
 .slip > *{position:relative}
 .slip .from{font-size:16px;opacity:.9}
 .slip .price{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(46px,9vw,60px);line-height:1;margin:6px 0 2px}
@@ -111,9 +111,9 @@ section{padding:56px 0}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{margin:0 0 18px;color:var(--ink-soft)}
 
-.closer{background:linear-gradient(180deg, #fff7fb, #ffffff);border:1px solid var(--line);border-radius:28px;padding:36px 26px;text-align:left;box-shadow:0 18px 40px rgba(225,64,155,0.06)}
-.closer h2{font-size:clamp(30px,5vw,44px);max-width:18ch}
-.closer p{color:var(--ink-soft);margin:12px 0 24px;max-width:46ch}
+.closer{background:linear-gradient(135deg, var(--primary-dark), var(--primary));border:1px solid rgba(255,255,255,0.16);border-radius:28px;padding:36px 26px;text-align:left;box-shadow:0 18px 40px rgba(196,48,128,0.16);color:var(--on-pink)}
+.closer h2{font-size:clamp(30px,5vw,44px);max-width:18ch;color:var(--on-pink)}
+.closer p{color:rgba(255,255,255,0.9);margin:12px 0 24px;max-width:46ch}
 
 footer{padding:36px 0 120px;font-size:14px;color:var(--ink-soft)}
 footer .row{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:14px}
@@ -187,12 +187,12 @@ footer p{margin:6px 0;max-width:70ch}
     <section id="how">
       <div class="sec-head">
         <h2>How it works</h2>
-        <p>Three steps, all from your phone.</p>
+        <p>Advanced dual action weight management at a more affordable price.Three steps, all from your phone.</p>
       </div>
       <ol class="steps">
         <li><div><h3>Message us on WhatsApp</h3><p>Tell our team a good time and we'll book your consultation.</p></div></li>
         <li><div><h3>Meet your doctor</h3><p>A private video call to talk through your health history and goals.</p></div></li>
-        <li><div><h3>Start your plan</h3><p>Get a personalised plan and ongoing check-ins with your care team.</p></div></li>
+        <li><div><h3>Start your plan</h3><p>Get a personalised plan and ongoing check ins with our care team.</p></div></li>
       </ol>
     </section>
 
@@ -217,8 +217,8 @@ footer p{margin:6px 0;max-width:70ch}
         <h2>Questions</h2>
       </div>
       <div class="faq">
-        <details><summary>Who will I speak with?</summary><p>A licensed doctor on the MedVanceNg team, by private one-on-one video call.</p></details>
-        <details><summary>Is my consultation private?</summary><p>Yes. Your call is one-on-one, and your health information is kept confidential.</p></details>
+        <details><summary>Who will I speak with?</summary><p>A licensed doctor on the MedVanceNg team, by private one on one video call.</p></details>
+        <details><summary>Is my consultation private?</summary><p>Yes. Your call is one on one, and your health information is kept confidential.</p></details>
         <details><summary>Where do you serve?</summary><p>Anywhere in Nigeria. All you need is a phone with an internet connection.</p></details>
         <details><summary>How much does it cost?</summary><p>Plans start from ₦200,000 per month. Your doctor will explain exactly what your plan includes during your consultation.</p></details>
         <details><summary>How do I book?</summary><p>Tap "Book on WhatsApp" and send us a message. Our team will reply and schedule your consultation.</p></details>
@@ -240,7 +240,7 @@ footer p{margin:6px 0;max-width:70ch}
       <a href="[PRIVACY POLICY URL]">Privacy policy</a>
       <a href="[TERMS URL]">Terms</a>
     </div>
-    <p>Treatment options are decided by a licensed clinician after consultation. Individual results vary. Testimonials reflect individual experiences.</p>
+    <p>Dual Treatment options are decided by a licensed clinician after consultation. Individual results vary. Testimonials reflect individual experiences.</p>
     <p>NAFDAC </p>
     <p>© 2026 MedVanceNg</p>
   </footer>
