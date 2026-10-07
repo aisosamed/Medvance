@@ -455,6 +455,8 @@ img {
 
 .hero-buttons {
   display: flex;
+  position: relative; /* Brings buttons above background overlays */
+  z-index: 10;
   gap: 14px;
   flex-wrap: wrap;
 }
