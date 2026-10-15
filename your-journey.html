@@ -45,12 +45,14 @@ section{padding:3rem 0}
 .btn.block{width:100%}
 .reassure{font:500 .875rem/1.5 var(--head);color:var(--muted);margin:.9rem 0 0}
 .reassure b{color:var(--brand-dark)}
+.price-callout{display:block;margin-top:.4rem;color:var(--brand-dark);font:800 1.05rem/1.35 var(--head)}
 .proof{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--line);font:600 .9rem/1.3 var(--head);color:var(--muted)}
 .proof strong{display:block;font-size:1.5rem;color:var(--brand);line-height:1.1}
 .story-card{margin:2rem 0 0;border:2px solid var(--brand);border-radius:22px;padding:1.75rem 1.25rem;text-align:center;background:linear-gradient(180deg,#fff 0%,var(--pale) 100%)}
 .sizes{display:flex;align-items:center;justify-content:center;gap:1rem}
 .size{width:7rem;height:7rem;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font:800 2.4rem/1 var(--head);border:2px solid var(--line);background:#fff;color:var(--muted)}
 .size small{font:700 .7rem/1 var(--head);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.3rem}
+.size strong{font:800 1.45rem/1 var(--head)}
 .size.after{border-color:var(--brand);color:var(--brand);box-shadow:0 8px 24px rgba(225,64,155,.25)}
 .arrow{font-size:2rem;color:var(--brand)}
 .story-card p{margin:1.25rem 0 0;font:600 1rem/1.5 var(--head);color:var(--ink)}
@@ -100,6 +102,7 @@ details p{margin:.6rem 0 0;color:var(--muted);font-size:1rem}
   .top .wrap{align-items:flex-start;flex-direction:column;gap:.45rem}
   .sizes{gap:.5rem}
   .size{width:6rem;height:6rem;font-size:2rem}
+  .size strong{font-size:1.25rem}
   .story-card{padding:1.35rem .9rem}
 }
 @media(min-width:900px){
@@ -126,19 +129,19 @@ details p{margin:.6rem 0 0;color:var(--muted);font-size:1rem}
   <p class="eyebrow">For everyone who has tried so hard, for so long</p>
   <h1>You've tried everything. <em>It was never about willpower.</em></h1>
   <p class="lede">You've done the diets, the early mornings and the "starting Monday." You're still waiting to feel like yourself again. Meet the client who went from a size 16 to a size 12 in just 50 days with a plan built by doctors, and see how we can help you take the same first step.</p>
-  <a class="btn block" href="#book" data-cta="hero">Book my consultation <span aria-hidden="true">&rarr;</span></a>
-  <p class="reassure"><b>No pressure.</b> Our doctors assess you first, and only recommend treatment if it's right for you.</p>
+  <a class="btn block" href="https://wa.me/2347047658107?text=Hi%20MedVanceNg%2C%20I%27d%20like%20to%20book%20a%20consultation." target="_blank" rel="noopener noreferrer" data-cta="hero">Book my consultation <span aria-hidden="true">&rarr;</span></a>
+  <p class="reassure"><b>No pressure.</b> Our doctors assess you first, and only recommend treatment if it's right for you.<strong class="price-callout">Plans start from ₦200,000/month.</strong></p>
 
   <div class="story-card" aria-label="Client result: size 16 to size 12 in 50 days">
     <div class="sizes">
-      <div class="size"><small>Before</small>16</div>
+      <div class="size"><small>Before</small><strong>Size 16</strong></div>
       <span class="arrow" aria-hidden="true">&rarr;</span>
-      <div class="size after"><small>After</small>12</div>
+      <div class="size after"><small>After</small><strong>Size 12</strong></div>
     </div>
     <p><mark>In just 50 days.</mark> Our client's journey with MedVanceNg's doctor guided plan.</p>
     <!-- To show her photo or video thumbnail (with her written consent), add:
     <div class="photo-slot"><img src="/images/client-journey.jpg" alt="MedVanceNg client who went from size 16 to size 12" width="800" height="1000"></div> -->
-    <p class="fine">Results vary. Every plan is personal, and treatment starts only after a doctor's assessment.</p>
+    <p class="fine">Results vary. Every plan is personal, and treatment starts only after our doctor's assessment. <strong>Monthly price from ₦200,000.</strong></p>
   </div>
 </div></section>
 
@@ -159,7 +162,7 @@ details p{margin:.6rem 0 0;color:var(--muted);font-size:1rem}
   <p class="eyebrow">Her turning point</p>
   <h2>She stopped doing it <em>alone.</em></h2>
   <p>Our client came to us feeling like she'd run out of options. Instead of another crash diet, she saw one of our doctors, got a plan designed around her body and her life, and had support at every step.</p>
-  <p>She went from a <mark>size 16 to a size 12 in 50 days.</mark>. Her story is hers, and your plan will be yours, but the first step is the same: a real conversation with a doctor who listens.</p>
+  <p>She went from a <mark>size 16 to a size 12 in 50 days with our original M-J.</mark>. Her story is hers, and your plan will be yours, but the first step is the same: a real conversation with a doctor who listens.</p>
   <div class="cards">
     <div class="card"><h3>A team of licensed doctors</h3><p>Your plan is assessed and prescribed by medical professionals, never guesswork.</p></div>
     <div class="card"><h3>Built around you</h3><p>Your health history, goals and pace shape your treatment and dose.</p></div>
@@ -175,13 +178,13 @@ details p{margin:.6rem 0 0;color:var(--muted);font-size:1rem}
     <!-- REPLACE the bracketed text below with Mrs O's own words (with her permission). Do not publish placeholders. -->
     <figure class="review" style="margin:0">
       <div class="qm" aria-hidden="true">&ldquo;</div>
-      <blockquote>Medvanceng team is a blessing. I lost 15kg in 2 months with thier help. from 135 - 110 in 2 months.</blockquote>
+      <blockquote>Medvanceng team is a blessing. I lost 15kg in 2 months with thier help.I went from 135kg - 110kg in 2 months using thEir authentic M-j.</blockquote>
       <figcaption class="who"><span class="av" aria-hidden="true">O</span><span>Mrs O<small>Lekki, Lagos</small></span></figcaption>
     </figure>
     <!-- REPLACE the bracketed text below with Mrs W's own words (with her permission). Do not publish placeholders. -->
     <figure class="review" style="margin:0">
       <div class="qm" aria-hidden="true">&ldquo;</div>
-      <blockquote>It has been a journey, started with them at 180kg, now at 160. The consultation to the delivery and follow up. they are exceptional.</blockquote>
+      <blockquote>It has been a journey, started with them at 180kg, now at 160Kg. The consultation to the delivery and follow up.They are exceptional.</blockquote>
       <figcaption class="who"><span class="av" aria-hidden="true">W</span><span>Mrs W<small>Abuja</small></span></figcaption>
     </figure>
   </div>
@@ -230,6 +233,7 @@ details p{margin:.6rem 0 0;color:var(--muted);font-size:1rem}
   <details><summary>Is this safe?</summary><p>Treatment is only recommended after a doctor reviews your health history. Some people aren't suitable, for example during pregnancy or with certain medical conditions, and we'll tell you honestly if it isn't right for you.</p></details>
   <details><summary>Will I lose the same amount as your client?</summary><p>Everyone responds differently. Her result is her own, and your doctor will set realistic expectations for you.</p></details>
   <details><summary>Do I need to be a certain size to qualify?</summary><p>Your doctor decides based on your health, BMI and history. The consultation is the way to find out.</p></details>
+  <details><summary>What is your pricing?</summary><p>Prices vary by medicine and dose. <a href="https://www.medvanceng.com/#glp1">View our current GLP-1 product prices</a>; your doctor will review suitability and confirm your treatment plan.</p></details>
   <details><summary>What happens if I stop treatment?</summary><p>Weight can return after treatment stops, so we plan for the long term with you, including healthy habits that help you keep your results.</p></details>
   <details><summary>How does delivery work?</summary><p>Your treatment is packed cold and delivered anywhere in Nigeria after your consultation.</p></details>
 </div></section>
