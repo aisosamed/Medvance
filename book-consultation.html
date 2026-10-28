@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en-NG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Request a Consultation | MedVanceNg</title>
+  <meta name="description" content="Request a private video or audio consultation with the MedVanceNg care team. Choose a preferred date and share basic health information.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#C43080">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root{--pink:#e1409b;--pink-dark:#c43080;--pink-wash:#fff0f7;--ink:#2f2428;--muted:#66575d;--line:#eadde3;--paper:#fff;--font-head:Fraunces,Georgia,serif;--font-body:"DM Sans",system-ui,sans-serif;box-sizing:border-box;color-scheme:light}
+    *,*::before,*::after{box-sizing:inherit}
+    body{margin:0;background:linear-gradient(180deg,#fff8fb 0,white 28rem);color:var(--ink);font:400 16px/1.6 var(--font-body)}
+    a{color:var(--pink-dark)}
+    a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+    .wrap{width:min(100% - 32px,780px);margin-inline:auto}
+    .header{display:flex;align-items:center;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line)}
+    .brand{font:700 22px/1 var(--font-head);text-decoration:none;color:var(--pink-dark)}
+    .brand span{color:var(--ink)}
+    .header-note{color:var(--muted);font-size:13px;font-weight:600}
+    main{padding:42px 0 64px}
+    .eyebrow{margin:0 0 10px;color:var(--pink-dark);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    h1,h2{font-family:var(--font-head);line-height:1.12}
+    h1{max-width:17ch;margin:0;font-size:clamp(36px,7vw,54px)}
+    .intro{max-width:64ch;margin:14px 0 24px;color:var(--muted);font-size:18px}
+    .notice{display:grid;grid-template-columns:24px 1fr;gap:12px;padding:15px 16px;border:1px solid #efc6dc;border-left:4px solid var(--pink);border-radius:8px;background:var(--pink-wash);font-size:14px}
+    .notice strong{display:block;color:var(--ink)}
+    form{margin-top:24px}
+    fieldset{min-width:0;margin:0 0 18px;padding:22px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+    legend{padding:0 8px;font:700 21px/1.2 var(--font-head)}
+    .help{margin:-4px 0 16px;color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .field{min-width:0}
+    .field.full{grid-column:1/-1}
+    label,.label{display:block;margin:0 0 6px;font-size:14px;font-weight:700}
+    input,select,textarea{width:100%;min-height:48px;padding:11px 12px;border:1px solid #cfc1c8;border-radius:6px;background:#fff;color:var(--ink);font:500 16px/1.4 var(--font-body)}
+    textarea{min-height:96px;resize:vertical}
+    .hint{display:block;margin-top:5px;color:var(--muted);font-size:12px}
+    .call-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .call-option{position:relative}
+    .call-option input{position:absolute;width:1px;height:1px;opacity:0}
+    .call-option label{display:flex;align-items:center;gap:12px;min-height:70px;margin:0;padding:14px;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+    .call-option input:checked+label{border:2px solid var(--pink-dark);background:var(--pink-wash)}
+    .call-option input:focus-visible+label{outline:3px solid var(--pink);outline-offset:3px}
+    .call-option strong{display:block}
+    .call-option small{display:block;color:var(--muted);font-weight:400}
+    .choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px}
+    .choice{display:flex;align-items:flex-start;gap:9px;font-weight:500;line-height:1.4}
+    .choice input{width:18px;min-height:18px;height:18px;flex:0 0 18px;margin:2px 0 0;accent-color:var(--pink-dark)}
+    .consent{padding:16px;background:#f7f5f6;border-radius:6px}
+    .consent .choice{font-weight:600}
+    .submit{width:100%;min-height:56px;margin-top:18px;padding:12px 20px;border:0;border-radius:6px;background:var(--pink-dark);color:#fff;font:700 17px/1.3 var(--font-body);cursor:pointer}
+    .submit:hover{background:#a9256a}
+    .submit-note{margin:9px 0 0;color:var(--muted);font-size:13px;text-align:center}
+    footer{padding:20px 0 32px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+    footer p{margin:0 0 8px}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,780px)}main{padding-top:30px}fieldset{padding:18px 14px}.grid,.choices{grid-template-columns:1fr}.field.full{grid-column:auto}.header{gap:12px}.header-note{font-size:12px;text-align:right}.call-options{gap:8px}.call-option label{padding:10px;font-size:14px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <a class="brand" href="https://www.medvanceng.com/" aria-label="MedVanceNg home">MedVance<span>Ng</span></a>
+      <span class="header-note">Private clinician consultation</span>
+    </header>
+    <main>
+      <p class="eyebrow">Choose a time to talk</p>
+      <h1>Request your consultation.</h1>
+      <p class="intro">Choose a preferred date and time, tell us whether you would like a video or audio call, and share a few details to help your clinician prepare.</p>
+      <aside class="notice">
+        <span aria-hidden="true">&#9432;</span>
+        <div><strong>Your appointment is confirmed by our team.</strong>This page collects a preferred time, not live calendar availability. Your request and answers will be placed in a WhatsApp message for you to review and send. This page does not store your answers. WhatsApp processes the message, so only continue if you agree to share these health details there. Do not use this form for urgent medical concerns.</div>
+      </aside>
+
+      <form id="bookingForm">
+        <fieldset>
+          <legend>Appointment preference</legend>
+          <p class="help">Choose your preferred date and one of the available request windows. Our team will confirm the appointment and call details on WhatsApp.</p>
+          <div class="grid">
+            <div class="field"><label for="date">Preferred date *</label><input id="date" name="date" type="date" required></div>
+            <div class="field"><label for="time">Preferred time (WAT) *</label><select id="time" name="time" required><option value="">Select a time</option><option>9:00 AM - 10:00 AM</option><option>10:00 AM - 11:00 AM</option><option>11:00 AM - 12:00 PM</option><option>12:00 PM - 1:00 PM</option><option>1:00 PM - 2:00 PM</option><option>2:00 PM - 3:00 PM</option><option>3:00 PM - 4:00 PM</option><option>4:00 PM - 5:00 PM</option></select></div>
+            <div class="field full"><span class="label">How would you like to speak with the clinician? *</span><div class="call-options">
+              <div class="call-option"><input id="video" name="callType" type="radio" value="Video call" required><label for="video"><span aria-hidden="true">&#9635;</span><span><strong>Video call</strong><small>Private face-to-face call</small></span></label></div>
+              <div class="call-option"><input id="audio" name="callType" type="radio" value="Audio call"><label for="audio"><span aria-hidden="true">&#9742;</span><span><strong>Audio call</strong><small>Private voice call</small></span></label></div>
+            </div></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About you</legend>
+          <p class="help">We use these details to identify you and coordinate your appointment.</p>
+          <div class="grid">
+            <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" maxlength="80" required></div>
+            <div class="field"><label for="age">Age in years *</label><input id="age" name="age" type="number" min="18" max="120" inputmode="numeric" required></div>
+            <div class="field"><label for="phone">WhatsApp phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. +234 801 234 5678" maxlength="25" required></div>
+            <div class="field"><label for="location">City and state *</label><input id="location" name="location" autocomplete="address-level2" placeholder="e.g. Ikeja, Lagos" maxlength="80" required></div>
+            <div class="field full"><label for="goal">What would you like help with? *</label><textarea id="goal" name="goal" maxlength="500" placeholder="Briefly describe your goals or main concern." required></textarea></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Health background</legend>
+          <p class="help">Select any conditions you have now or have had before. Our clinician will review your answers with you.</p>
+          <div class="field">
+            <span class="label">Have you been diagnosed with any of these?</span>
+            <div class="choices">
+              <label class="choice"><input type="checkbox" name="conditions" value="Type 2 diabetes">Type 2 diabetes</label>
+              <label class="choice"><input type="checkbox" name="conditions" value="High blood pressure">High blood pressure</label>
+              <label class="choice"><input type="checkbox" name="conditions" value="Heart disease">Heart disease</label>
+              <label class="choice"><input type="checkbox" name="conditions" value="Pancreatitis">Pancreatitis</label>
+              <label class="choice"><input type="checkbox" name="conditions" value="Gallbladder disease">Gallbladder disease</label>
+              <label class="choice"><input type="checkbox" name="conditions" value="Kidney disease">Kidney disease</label>
+              <label class="choice"><input type="checkbox" name="conditions" value="Thyroid condition or MEN2 history">Thyroid condition or MEN2 history</label>
+              <label class="choice"><input type="checkbox" name="conditions" value="None of these">None of these</label>
+            </div>
+          </div>
+          <div class="grid" style="margin-top:18px">
+            <div class="field"><label for="otherConditions">Other health conditions</label><textarea id="otherConditions" name="otherConditions" maxlength="500" placeholder="Include anything else your clinician should know."></textarea></div>
+            <div class="field"><label for="allergies">Medicine or food allergies</label><textarea id="allergies" name="allergies" maxlength="300" placeholder="List the allergy and reaction, if known. Write none known if applicable."></textarea></div>
+            <div class="field"><label for="pregnancy">Are you pregnant, breastfeeding, or planning pregnancy?</label><select id="pregnancy" name="pregnancy"><option value="">Choose one</option><option>No</option><option>Yes</option><option>Not applicable</option><option>Unsure / prefer to discuss privately</option></select></div>
+            <div class="field"><label for="pastMedicines">Previous weight-management medicines</label><textarea id="pastMedicines" name="pastMedicines" maxlength="300" placeholder="Name, when you used it, and any side effects if known."></textarea></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Current medicines</legend>
+          <p class="help">Include prescription medicines, injections, vitamins and supplements. Add dose and frequency if known.</p>
+          <div class="field"><label for="medications">Medicines and supplements you currently take</label><textarea id="medications" name="medications" maxlength="1000" placeholder="Name - dose - how often. Write none if you do not take any."></textarea></div>
+        </fieldset>
+
+        <div class="consent">
+          <label class="choice" for="consent"><input id="consent" name="consent" type="checkbox" required><span>I agree to send the details above to MedVanceNg through WhatsApp so the care team can arrange and prepare for my consultation. I understand my appointment is not booked until the team confirms it, and I can choose to share health details directly with the clinician instead. *</span></label>
+        </div>
+        <button class="submit" type="submit">Review and send request on WhatsApp</button>
+        <p class="submit-note">WhatsApp will open with your message. Check it, then tap Send.</p>
+      </form>
+    </main>
+    <footer>
+      <p>This form is for appointment requests, not diagnosis or medical advice. Treatment is considered only after review by our licensed clinician.</p>
+      <p><a href="https://www.medvanceng.com/">MedVanceNg</a> · <a href="/consultation.html">Consultation information</a></p>
+    </footer>
+  </div>
+  <script>
+    (function(){
+      var form=document.getElementById("bookingForm");
+      var dateInput=document.getElementById("date");
+      var today=new Date();
+      var localToday=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
+      dateInput.min=localToday;
+      dateInput.addEventListener("change",function(){
+        if(dateInput.value&&dateInput.value<localToday) dateInput.setCustomValidity("Choose today or a future date.");
+        else dateInput.setCustomValidity("");
+      });
+      form.addEventListener("submit",function(event){
+        event.preventDefault();
+        if(!form.reportValidity()) return;
+        var data=new FormData(form);
+        var conditions=data.getAll("conditions");
+        var message=[
+          "Hi MedVanceNg, I would like to request a consultation:",
+          "Preferred date: "+data.get("date"),
+          "Preferred time (WAT): "+data.get("time"),
+          "Call type: "+data.get("callType"),
+          "Name: "+data.get("name"),
+          "Age: "+data.get("age"),
+          "WhatsApp number: "+data.get("phone"),
+          "City/state: "+data.get("location"),
+          "Goal/main concern: "+data.get("goal"),
+          "Health conditions: "+(conditions.length?conditions.join(", "):"Not selected / none disclosed"),
+          "Other conditions: "+(data.get("otherConditions")||"Not provided"),
+          "Allergies: "+(data.get("allergies")||"Not provided"),
+          "Pregnancy/breastfeeding: "+(data.get("pregnancy")||"Not provided"),
+          "Previous weight-management medicines: "+(data.get("pastMedicines")||"Not provided"),
+          "Current medicines/supplements: "+(data.get("medications")||"Not provided")
+        ].join("\n");
+        window.location.href="https://wa.me/2347047658107?text="+encodeURIComponent(message);
+      });
+    })();
+  </script>
+</body>
+</html>
