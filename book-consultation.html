@@ -96,6 +96,7 @@
           <div class="grid">
             <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" maxlength="80" required></div>
             <div class="field"><label for="age">Age in years *</label><input id="age" name="age" type="number" min="18" max="120" inputmode="numeric" required></div>
+            <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@example.com" required></div>
             <div class="field"><label for="phone">WhatsApp phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g. +234 801 234 5678" maxlength="25" required></div>
             <div class="field"><label for="location">City and state *</label><input id="location" name="location" autocomplete="address-level2" placeholder="e.g. Ikeja, Lagos" maxlength="80" required></div>
             <div class="field full"><label for="goal">What would you like help with? *</label><textarea id="goal" name="goal" maxlength="500" placeholder="Briefly describe your goals or main concern." required></textarea></div>
@@ -166,6 +167,7 @@
           "Preferred time (WAT): "+data.get("time"),
           "Call type: "+data.get("callType"),
           "Name: "+data.get("name"),
+          "Email: "+data.get("email"),
           "Age: "+data.get("age"),
           "WhatsApp number: "+data.get("phone"),
           "City/state: "+data.get("location"),
